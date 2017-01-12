@@ -1,2 +1,2 @@
 # ecollett1.github.io
-# all of Eric Collett's Assignments
+all of Eric Collett's Assignments
