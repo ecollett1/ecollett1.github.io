@@ -3,9 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CS 213 Week 05 Ponder and Prove</title>
-
-    <script type="text/javascript" src="213.05.PonderProblem.js"></script>
+    <title>CIT 261 Topic 1</title>
 
     <style type="text/css">
         form, pre {
@@ -34,13 +32,13 @@
 </head>
 
 <body>
-<!-- First problem: Hello world -->
+<!-- First problem: Recursive function -->
 <script>
 
     function problem1(number)
     {
-        var lNumber = recursive(number);
-        alert(lNumber);
+        var multiple = recursive(number);
+        alert(multiple);
     }
     function recursive(number1)
     {
@@ -52,7 +50,7 @@
 </script>
 
 <h2>#1: Recursive</h2>
-<p>Recursive functrion that gives you the lowest number of your given number when it can be divided by 2.</p>
+<p>Recursive function that returns the lowest multiple of that number when dividing by 2.</p>
 Number: <input type="text" id="number" size="20" value="2"/> 
     <button type="button" id="button1" 
         onclick="problem1(document.getElementById('number').value)">
@@ -62,17 +60,34 @@ Number: <input type="text" id="number" size="20" value="2"/>
 <!-- Second problem: Form Letter -->
 <script>
 
-   function problem2(name, text)
-   {
-      var text2 = text.replace(/RICH_GUY/g, name);
-      alert(text2);
-   }
+    function problem2(number)
+    {
+       var numLoops = 0;
+       for (int i = number; i < 50; i++)
+          numLoops++;
+       alert(numLoops);
+    }
    
+    function problem3(number)
+    {
+       do
+       {
+           alert(number);
+           if (number == 14 || number == 16)
+               alert("This is the last loop...");
+           if (number < 14)
+               number++;
+           else
+               number--;
+        }
+        while(number != 15);
+        alert(number);
+    }
 </script>
 
-<h2>#2: Form Letter</h2>
-<p>Write a function to perform a simple form letter substitution. Consider the following letter:</p>
-<pre id="text2">
+<h2>#2: Loops and conditionals</h2>
+<p>Loops through given number to show you for and while loops.</p>
+<!--<pre id="text2">
 Dear RICH_GUY:
 
 We are glad to have you has a customer in our bank. Due to
@@ -84,17 +99,23 @@ business.
 Sincerely,
 
 Bank President
-</pre>
-<p>Please write the necessary JavaScript to substitute RICH_GUY for the customer's actual name. Display the resulting message in an alert.</p>
+</pre> -->
+<p>Please insert number to be looped.</p>
 
-Name: <input type="text" id="name2" size="30" value="Mr. Willingsburg"/>
+Number: <input type="text" id="number2" size="30" value="15"/>
 <button
         type="button"
         id="button2"
-        onclick="problem2(document.getElementById('name2').value, document.getElementById('text2').innerHTML)">
-    Problem 2
+        onclick="problem3(document.getElementById('number2').value)">
+    For Loop
 </button>
 
+<button
+        type="button"
+        id="button2"
+        onclick="problem2(document.getElementById('number2').value)">
+    While Loop
+</button>
 
 <!-- Third problem: Temperature Conversion -->
 <script>
