@@ -9,7 +9,7 @@
         }
       
     </style>
-    <link rel="stylesheet" href="C:\Users\ericm\Desktop\Github website files\css2.css">
+    <link rel="stylesheet" href="css1.css">
   </head>
   <body>
     <h1 style="text-align:center;">CIT 261 Assignments</h1>
