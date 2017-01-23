@@ -14,13 +14,13 @@
     <h1 style="text-align:center;">CS 213 Assignments</h1>
     
     <ul id="menu" style="list-style-type:none">
-      <li><a href="public_html/week02/week02.html">Week 02</a></li>
+      <li><a href="public_html/week02/week02.html">Assignment week 4</a></li>
       <br>
-      <li><a href="public_html/week03/week03.html">Week 03</a></li>
+      <li><a href="public_html/week03/week03.html">Nothing yet</a></li>
       <br>
-      <li><a href="public_html/week04/week04.html">Week 04</a></li>
+      <li><a href="public_html/week04/week04.html">Nothing</a></li>
       <br>
-      <li><a href="public_html/week05/week05.html">Week 05</a></li>
+      <li><a href="public_html/week05/week05.html">Topic 1</a></li>
       <br>
       <li><a href="public_html/week06/week06.html">Week 06</a></li>
       <br>
