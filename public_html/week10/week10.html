@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 10 Assignment</title>
+    <style>
+      #large
+      {
+        font-size:24px;
+      }
+      .dropdown
+      {
+        font-size:16px;
+        padding: 5px 10px;
+      }
+      .dropdown:hover
+      {
+        color: blue;
+        display: block;
+      }
+      
+      p 
+      {
+         font-size:14px;
+         padding: 0px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Week 10, Part 1</h2>
+    
+    <pre id="toReplace"><p>Choose a country to display the 10 largest cities with their populations:</p></pre>
+
+    <select class="dropdown" onchange="loadDoc(this)">
+      <option value="default.txt">Default</option>
+      <option value="canada.txt">Canada</option>
+      <option value="usa.txt">USA</option>
+      <option value="russia.txt">Russia</option>
+      <option value="mexico.txt">Mexico</option>
+    </select>
+    <script>
+      function loadDoc(tag) {
+      console.log(tag.value);
+      var text = new XMLHttpRequest();
+      text.onreadystatechange = function() {
+        if (text.readyState == 4 && text.status == 200) 
+        {
+          document.getElementById("toReplace").innerHTML = text.responseText;
+        }
+      };
+      text.open("GET", tag.value, true);
+      text.send();
+      }
+    </script>
+    <h4 id="large">Week, 10 Part 2</h4>
+    
+    <div id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
+    <input type="text" id="location" value="json.txt"/>
+    <input type="button" onclick="loadJson()" value="Submit URL"/>
+    <br><br>
+    <a href="../index.html">Home Page</a>
+    <script>
+      function loadJson() {
+      var toParse = new XMLHttpRequest();
+      var url = document.getElementById("location").value;
+      toParse.onreadystatechange = function() {
+        if (toParse.readyState == 4 && toParse.status == 200) 
+        {
+          var array = JSON.parse(toParse.responseText);
+          myFunction(array);
+        }
+      };
+      toParse.open("GET", url, true);
+      toParse.send();
+      }
+      
+      function myFunction(array)
+      {
+        var out = "Students: <br>";
+        var i;
+        for (i = 0; i < array.length; i++)
+        {
+          out += "<p><strong>" + array[i].first + " " + array[i].last + "</strong> - " + array[i].address.city +  ", " + 
+          array[i].address.state + " " +  array[i].address.zip + "<br>Major in: " + array[i].major + 
+          "<br>GPA: " + array[i].gpa + "</p>";
+        }
+        document.getElementById("toReplace2").innerHTML = out;
+      }
+      </script>
+  </body>
+</html>

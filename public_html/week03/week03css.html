@@ -1,0 +1,293 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style> /* #0 */
+      body {
+      background-color: midnightblue;
+      }
+      
+      h {
+      background-color: silver;
+      font-size:300%;
+      text-transform: capatilize;
+      text-align: center;
+      color: midnightblue;
+      }
+      
+      p {
+      color: silver;
+      font-size:150%;
+      text-align: right;
+      text-indent: 50px;
+      margin-left: 15%;
+      margin-right: 15%;
+      }
+      
+      ul {
+      list-style-type: upper-roman;
+      color: silver;
+      font-size: 150%;
+      text-style: italic;
+      text-align: center;
+      }
+      
+      li {
+      color: silver;
+      font-size: 150%;
+      text-style: italic;
+      text-align: center;
+      }
+      
+      a:link {
+      font-size: 175%;
+      color: white;
+      text-decoration: none;
+      }
+      
+      a:hover {
+      font-size: 200%;
+      color: white;
+      text-decoration: underline;
+      text-style: italic;
+      }
+      
+      h2 {
+      color: white;
+      font-size: 200%;
+      text-style: bold;
+      }
+      <!--Landon, Mecham-->
+    </style>
+    <style> /* #1 */
+      
+      body {
+      background-color: green;
+      }
+      
+      h1 {
+      background-color: goldenrod;
+      color: green;
+      font-size: 500%;
+      font-style: oblique;
+      text-transform: capitalize;
+      text-align: right;
+      
+      }
+      
+      p {
+      
+      background-color: red;
+      color: green;
+      text-align: justify;
+      margin-right: 45%;
+      margin-left: 10%;
+      }
+      
+      
+      ul {
+      
+      background-color: goldenrod;
+      color: silver;
+      text-align: right;
+      direction: rtl;
+      font-size: 200%;
+      }
+      
+      li {
+      
+      background-color: silver;
+      color: gold;
+      text-align: left;
+      direction: rtl;
+      font-size: 150%;
+      
+      }
+      
+      a: link {
+      background-color: green;
+      color: goldenrod;
+      text-decoration: underline;
+      }
+      
+      a: hover {
+      background-color: green;
+      color: red;
+      text-decoration: none;
+      font-size: 200%;
+      }
+      
+      a: visited {
+      background-color: red;
+      color: silver;
+      text-decoration: strikethrough;
+      font-size: 150%;
+      }
+      
+      a: active {
+      background-color: white;
+      color: purple;
+      text-decoration: overline;
+      font-size: 75%;
+      }
+      <!--Landon, Mecham-->
+    </style>
+    <style> /* #2 */
+      
+      body {
+         font-size:17px;
+         background-color: rgb(0, 224, 174);
+      }
+
+      h1 {
+         background-color: blue;
+         color: orange;
+         font-size: 300%;
+         font-style: Times New Roman;
+         text-transform: bold;
+         text-align: center;
+   
+      }
+
+      p {
+         background-color: red;
+         color: black;
+         text-align: center;
+         width: 100px;
+         height: 50px;
+         word-spacing: 2.0ch;
+         overflow: hidden;
+         resize: both;
+         word-wrap: break-word;
+      }
+
+
+      ul {
+         color: white;
+         font-size: 200%;
+      }
+
+      li {
+         background-color: silver;
+         color: yellow;
+         text-align: center;
+         font-size: 190%;
+      }
+
+      a: hover{
+         background-color: blue;
+         color: purple;
+         text-decoration: highlight;
+      }
+
+      a: visited {
+         background-color: white;
+         color: black;
+         font-size: 125%;
+      }
+      
+    </style>
+    <style> /* #3 */
+      body {
+         font-family: "Comic Sans MS";
+         font-size: 12px;
+         background-color: rgb(255, 192, 255);  /* I made it pink! */
+      }
+      
+      .document {
+         max-width: 500px;
+      }
+      
+      #title {
+         font-size: 24px;
+         text-align: center;
+         
+      }
+      
+      h1 {
+         font-size: 18px;
+      }
+      
+      p {
+         font-size: 12px;
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+      
+      h3 {
+         color: red;
+         text-align: center;
+         border: 2px dashed blue;
+      }
+    </style>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 03 : CSS</title>
+  </head>
+  <body>
+    <div class="document">
+      <div id="title">
+        <h1>Week 03 : CSS</h1>
+        <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+      </div> <!--title -->
+      <div class="content">
+        <div id="menuBar">
+          <ul id="menuBarList">
+              <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+              <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+              <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+              <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+              <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+          </ul>
+        </div> <!-- menuBar -->
+        <div id="text">
+          <h1>Select the Stylesheet</h1>
+          <p>There are four stylesheets that you may select from. Each one will change the coloring, fonts, 
+            and even the layout of the page.You can change the layout of this page by selecting different 
+            stylesheets in the menu, or by selecting one of the following links:<br>
+              <a href="#0" onclick="applyStyle(0)">Stylesheet 1</a>,
+              <a href="#1" onclick="applyStyle(1)">Stylesheet 2</a>,
+              <a href="#2" onclick="applyStyle(2)">Stylesheet 3</a>,
+              <a href="#3" onclick="applyStyle(3)">Stylesheet 4</a>.
+            </p>
+            <h1>Instructions</h1>
+          <p>Stylesheet 1: This style sheet gives a blue and silver color scheme, makes the text bigger, and leave the text center aligned.
+            <br> 
+            Stylesheet 2: This sheet gives a wild color scheme, some strange text alignment, and some right to left text. the links also have very different styles. 
+            <br>
+            Stylesheet 3: This stylesheet allows you to resize all your text boxes vertically and horizontally, 
+            as well as centering all the words, and making them bigger for the hard of seeing.  The resize boxes
+            are just like the ones for written answers in I-Learn 3.0. - Eric Collett
+            <br>
+            Stylesheet 4: Makes the background pink, and makes the text line up fairly normally.  Also adds a border around the grading section to make it more important.
+            <br> 
+          </p>
+          </div> <!-- text -->
+          <div id="sidebar">
+            <h3>Grading</h3>
+            <p>Each group member (Landon Mecham, Jon Crawford, Eric Collett) contributed with their own style sheet.
+              Together we ended up making changes to style sheet 4 so we could each add our own individual touches
+              into the style of it.</p>
+          </div> <!--sidebar -->
+        </div> <!-- content -->
+        <div id="bottom">Submit this assignment by Friday at 10:00pm Mountain Standard Time (Rexburg, Idaho time).</div>
+      </div> <!-- document -->
+      
+      <script>
+	    <!-- DISABLE STYLES: This function turns off the four stylesheets -->
+	    function disableStyles() 
+		{
+		  document.styleSheets[0].disabled = true;
+		  document.styleSheets[1].disabled = true;
+		  document.styleSheets[2].disabled = true;
+		  document.styleSheets[3].disabled = true;
+		}
+		<!-- APPLY STYLES: This function turns off all four stylesheets, then turns one back on -->
+		function applyStyle(i)
+		{
+			disableStyles();
+			document.styleSheets[i].disabled = false;
+		}
+	  </script>
+   </body>
+</html>

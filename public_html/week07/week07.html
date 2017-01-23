@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <!--These are all the original styles for the page, not included in the .css stylesheet-->
+      .normal {                    
+         font-size: 12px;
+         color: black;
+         background: white;
+      }
+      
+      span {
+         display: block;
+      }
+      
+      .center {
+         text-align: center;
+      }
+      <!--Down to this point.-->
+    </style>
+    <title>ElectriCITY</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>ElectriCITY</h1>
+    
+    <h2><strong>Items To Buy:</strong></h2>
+    <table border="1" bgcolor="#00FFF7">
+      <th>
+        <td>Item</td>
+        <td>Price</td>
+        <td>Quantity</td>
+      </th>
+      <tr>
+        <td><input type="checkbox" id="items[]"/></td>
+        <td>Taser</td>
+        <td>$35.99</td>
+        <td><input type="text" class="inputBox" pattern="[0-9]{1,2}" value="0"/></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="items[]"/></td>
+        <td>Lightbulb</td>
+        <td>$1.99</td>
+        <td><input type="text" class="inputBox" pattern="[0-9]{1,2}" value="0"/></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="items[]"/></td>
+        <td>Toaster</td>
+        <td>$10.99</td>
+        <td><input type="text" class="inputBox" pattern="[0-9]{1,2}" value="0"/></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="items[]"/></td>
+        <td>Computer</td>
+        <td>$352.99</td>
+        <td><input type="text" class="inputBox" pattern="[0-9]{1,2}" value="0"/></td>
+      </tr>
+    </table>
+
+    <h3>Payment information</h3>
+    <p><strong>Personal Information</strong></p>
+      <input type="text" id="firstName" value="First Name"> First Name </input>
+      <br>
+      <input type="text" id="lastName" value="Last Name"> Last Name </input>
+      <br>
+      <input type="text" id="phoneNumber" value="012-345-6789"> Phone Number </input>
+      <br><br>
+      <form id="Address">
+        <input type="text" value="Address"/> Street Address </input>
+        <br>
+        <input type="text" value="Apartment"/> Apartment (optional) </input>
+        <br>
+        <input type="text" value="City"/> City </input>
+        <br>
+        <input type="text" value="State" pattern="[A-Z]{2}" /> 2 Letter State </input>
+        <br>
+        <input type="text" value="01234" pattern="[0-9]{5,9}"/> Zip Code </input>
+        <br>
+        
+      <br>
+    <p><strong>Credit Card</strong></p>
+     <select id="dropdown" onchange="myFunction()">
+      <option value="Visa">Visa</option>
+      <option value="MasterCard">Master Card</option>
+      <option value="Debit">Debit</option>
+    </select>
+    <br>
+    <input type="text" pattern="[0-9]{16}" value="1234567812345678"> 16 digit Credit Card </input>
+    <br>
+    <input type="text" class="inputBox" pattern="[0-9]{3}" value="123"> 3 digit security number </input>
+    <br><br>
+    
+      <input type="submit" value="Purchase" action="reset" />
+      <br><br>
+      <a href="../index.html">Home Page</a>
+  </body>
+</html>

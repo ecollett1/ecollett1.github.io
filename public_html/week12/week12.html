@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+      function getTotal()
+      {
+        var i;
+        var x = document.getElementsByName("items");
+        var total = 0;
+        var totalText = "Total with 8% tax: <strong>$";
+        for (i = 0; i < x.length; i++)
+        {
+           if (x[i].childNodes[1].childNodes[0].checked == true)
+           {
+             total += (x[i].childNodes[1].childNodes[0].value * x[i].childNodes[7].childNodes[0].value);
+           }
+        }
+        total += (total * .08);
+        total = total.toFixed(2);
+        totalText += total + "</strong>";
+        document.getElementById("total1").innerHTML = totalText;
+        document.getElementById("total").value = totalText;
+        return totalText;
+      }
+    </script>
+    <style>
+      <!--These are all the original styles for the page, not included in the .css stylesheet-->
+      .normal {                    
+         font-size: 12px;
+         color: black;
+         background: white;
+      }
+      
+      span {
+         display: block;
+      }
+      
+      .center {
+         text-align: center;
+      }
+      <!--Down to this point.-->
+    </style>
+    <title>ElectriCITY</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>ElectriCITY</h1>
+    
+    <h2><strong>Items To Buy:</strong></h2>
+    <form action="week12.php" id="form1" method="post">
+    <table border="1" bgcolor="#00FFF7">
+      <th>
+        <td>Item</td>
+        <td>Price</td>
+        <td>Quantity</td>
+      </th>
+      <tr name="items">
+        <td><input type="checkbox" name="first" id="item1" value="35.99" onchange="getTotal()"/></td>
+        <td>Taser</td>
+        <td>$35.99</td>
+        <td><input type="text" name="qty1" id="inputBox" pattern="[0-9]{1,2}" onkeyup="getTotal()" value="0"/></td>
+      </tr name="items">
+      <tr name="items">
+        <td><input type="checkbox" name="second" id="items2" value="1.99" onchange="getTotal()"/></td>
+        <td>Lightbulb</td>
+        <td>$1.99</td>
+        <td><input type="text" name="qty2" id="inputBox" pattern="[0-9]{1,2}" onkeyup="getTotal()" value="0"/></td>
+      </tr>
+      <tr name="items">
+        <td><input type="checkbox" name="third" id="item3" value="10.99" onchange="getTotal()"/></td>
+        <td>Toaster</td>
+        <td>$10.99</td>
+        <td><input type="text" name="qty3" id="inputBox" pattern="[0-9]{1,2}" onkeyup="getTotal()" value="0"/></td>
+      </tr>
+      <tr name="items">
+        <td><input type="checkbox" name="fourth" id="item4" value="352.99" onchange="getTotal()"/></td>
+        <td>Computer</td>
+        <td>$352.99</td>
+        <td><input type="text" name="qty4" id="inputBox" pattern="[0-9]{1,2}" onkeyup="getTotal()" value="0"/></td>
+      </tr>
+    </table>
+    
+    <input id="total" name="total" value="Total: <strong>$0.00</strong>" type="hidden"/>
+    <span id="total1" name="total1">Total with 8% tax: <strong>$0.00</strong></span>
+    
+      <h3>Payment information</h3>
+      <p><strong>Personal Information</strong></p>
+      <input type="text" name="firstName" value="First Name"> First Name </input>
+        <br>
+      <input type="text" name="lastName" value="Last Name"> Last Name </input>
+        <br>
+      <input type="text" name="phoneNumber" value="0123456789" pattern="[0-9]{10}" > 10 Digit Phone Number xxxxxxxxxx</input>
+        <br><br>
+      <input type="text" name="Address" value="Address"> Street Address </input>
+        <br>
+      <input type="text" name="Apartment" value=""> Apartment (optional) </input>
+        <br>
+      <input type="text" name="City" value="City" > City </input>
+        <br>
+      <input type="text" name="State" value="ID" pattern="[A-Z]{2}"> 2 Letter State </input>
+        <br>
+      <input type="text" name="zip" value="01234"pattern="[0-9]{5,9}"> Zip Code </input>
+        <br><br>
+      <p><strong>Credit Card</strong></p>
+      <select name="credType" id="dropdown" onchange="myFunction()">
+        <option value="Visa">Visa</option>
+        <option value="MasterCard">Master Card</option>
+        <option value="Debit">Debit</option>
+      </select>
+        <br>
+      <input type="text" pattern="[0-9]{16}" name="card" value="1234567812345678"> 16 digit Credit Card </input>
+        <br>
+      <input type="text" id="inputBox" name="security" pattern="[0-9]{3}" value="123"> 3 digit security number </input>
+        <br>
+      <input type="text" id="inputBox" name="month" value="January"> Expiration month(January-December)</input>
+      <input type="text" id="inputBox" name="year" pattern="[0-9]{4}" value="2016"> Expiration year(xxxx)</input>
+        <br><br>
+      
+      <input type="submit" value="Purchase"/>
+    </form>
+      <br><br>
+    <a href="../index.html">Home Page</a>
+  </body>
+</html>
