@@ -13,7 +13,7 @@
   </head>
   <body>
     <h1 style="text-align:center;">CIT 261 Assignments</h1>
-    
+    <p> This paragraph should look different with my .css file </p>
     <ul id="menu" style="list-style-type:none">
       <li>Week 02</li>
     </ul>
