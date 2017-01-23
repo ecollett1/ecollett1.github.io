@@ -56,7 +56,7 @@ Number: <input type="text" id="number" size="20" value="2"/>
         onclick="problem1(document.getElementById('number').value)">
         Problem 1
     </button>
-
+<div id="output" style="font-weight:bold"></div>
 <!-- Second problem: Form Letter -->
 <script>
 
@@ -64,24 +64,32 @@ Number: <input type="text" id="number" size="20" value="2"/>
     {
        var numLoops = 0;
        for (int i = number; i < 50; i++)
-          numLoops++;
+          numLoops += 1;
        alert(numLoops);
     }
    
-    function problem3(number)
+    function problem3(number1)
     {
-       do
-       {
-           alert(number);
-           if (number == 14 || number == 16)
-               alert("This is the last loop...");
-           if (number < 14)
-               number++;
-           else
-               number--;
+        var output = document.getElementById('number1').value;
+        if (output.innerHTML.length != 0) {
+            output.innerHTML = "";
         }
-        while(number != 15);
-        alert(number);
+        
+        var html;
+        
+        do
+        {
+            html = output.innerHTML;
+            html += number + " ";
+            if (number1 == 14 || number1 == 16)
+                html += "This is the last loop...";
+            if (number1 < 14)
+                number1++;
+            else
+                number1--;
+            output.innerHtml = html;
+        }
+        while(number1 != 15);
     }
 </script>
 
@@ -112,7 +120,7 @@ Number: <input type="text" id="number2" size="30" value="15"/>
 
 <button
         type="button"
-        id="button2"
+        id="button3"
         onclick="problem2(document.getElementById('number2').value)">
     While Loop
 </button>
@@ -120,7 +128,7 @@ Number: <input type="text" id="number2" size="30" value="15"/>
 <!-- Third problem: Temperature Conversion -->
 <script>
 
-   function problem3(fahrenheit)
+   function problem4(fahrenheit)
    {
       var celsius = (5/9) * (fahrenheit - 32);
       var celsiusReal = celsius.toFixed(1);
@@ -134,8 +142,8 @@ Number: <input type="text" id="number2" size="30" value="15"/>
 Fahrenheit: <input type="text" id="text3" size="10" value="96.5"/>
 <button
         type="button"
-        id="button3"
-        onclick="problem3(document.getElementById('text3').value)">
+        id="button4"
+        onclick="problem4(document.getElementById('text3').value)">
     Problem 3
 </button>
 
@@ -197,7 +205,7 @@ Fahrenheit: <input type="text" id="text3" size="10" value="96.5"/>
 Weight: <input type="text" id="text4" size="3" value="3"/>
 <button
         type="button"
-        id="button4"
+        id="button5"
         onclick="problem4(document.getElementById('text4').value)">
     Problem 4
 </button>
@@ -243,7 +251,7 @@ function problem5(apr1, term, amount)
 </table>
 <button
         type="button"
-        id="button5"
+        id="button6"
         onclick="problem5(document.getElementById('apr5').value, document.getElementById('term5').value, document.getElementById('amount5').value)">
     Problem 5
 </button>
