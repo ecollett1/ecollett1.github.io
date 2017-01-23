@@ -5,17 +5,38 @@
     <style>
       ul#menu li
         {
-          text-align: left;
+          text-align: center;
         }
       
     </style>
-    <link rel="stylesheet" href="css1.css">
   </head>
   <body>
-    <h1 style="text-align:center;">CIT 261 Assignments</h1>
-    <p> This paragraph should look different with my .css file </p>
+    <h1 style="text-align:center;">CS 213 Assignments</h1>
+    
     <ul id="menu" style="list-style-type:none">
-      <li>Week 02</li>
+      <li><a href="public_html/week02/week02.html">Week 02</a></li>
+      <br>
+      <li><a href="public_html/week03/week03.html">Week 03</a></li>
+      <br>
+      <li><a href="public_html/week04/week04.html">Week 04</a></li>
+      <br>
+      <li><a href="public_html/week05/week05.html">Week 05</a></li>
+      <br>
+      <li><a href="public_html/week06/week06.html">Week 06</a></li>
+      <br>
+      <li><a href="public_html/week07/week07.html">Week 07</a></li>
+      <br>
+      <li><a href="public_html/week08/week08.html">Week 08</a></li>
+      <br>
+      <li><a href="public_html/week09/week09.html">Week 09</a></li>
+      <br>
+      <li><a href="public_html/week10/week10.html">Week 10</a></li>
+      <br>
+      <li><a href="public_html/week11/week11.html">Week 11</a></li>
+      <br>
+      <li><a href="public_html/week12/week12.html">Week 12</a></li>
+      <br>
+      <li><a href="public_html/week13/week13.html">Week 13</a></li>
     </ul>
     
   </body>
