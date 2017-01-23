@@ -37,15 +37,27 @@
 <!-- First problem: Hello world -->
 <script>
 
-   function problem1()
-   {
-      alert("Hello World");
-   }
+    function problem1(number)
+    {
+        var multiple = recursive(number);
+        alert(number);
+    }
+    function recursive(number1)
+    {
+        if (number1 % 2 == 0)
+            return recursive(number1 / 2);
+        else
+            return number1;
+    }
 </script>
 
-<h2>#1: Hello world</h2>
-<p>Write the necessary JavaScript to put "Hello World" in an alert with the click of a button.</p>
-<button type="button" id="button1" onclick="problem1()">Problem 1</button>
+<h2>#1: Recursive</h2>
+<p>Recursive functrion that gives you the lowest number of your given number when it can be divided by 2.</p>
+Number: <input type="text" id="number" size="20" value="2"/> 
+    <button type="button" id="button1" 
+        onclick="problem1(document.getElementById('number').value)">
+        Problem 1
+    </button>
 
 <!-- Second problem: Form Letter -->
 <script>
