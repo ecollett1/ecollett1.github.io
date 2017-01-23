@@ -1,0 +1,61 @@
+body {
+    background-color: midnightblue;
+}
+
+h {
+background-color: silver;
+font-size:300%;
+text-transform: capatilize;
+text-align: center;
+color: midnightblue;
+}
+
+p {
+color: silver;
+font-size:150%;
+text-align: right;
+text-indent: 50px;
+margin-left: 15%;
+margin-right: 15%;
+}
+
+ul {
+list-style-type: upper-roman;
+color: silver;
+font-size: 150%;
+text-style: italic;
+text-align: center;
+}
+
+a:link {
+font-size: 175%;
+color: white;
+text-decoration: none;
+}
+
+a:hover {
+font-size: 200%;
+color: white;
+text-decoration: underline;
+text-style: italic;
+}
+
+a:visited { 
+font-size: 175%;
+color: lightgray;
+text-decoration: none;
+}
+
+a:active {
+font-size: 175%;
+color: lightgray;
+text-decoration: none;
+}
+
+h2 { 
+color: white;
+font-size: 200%;
+text-style: bold;
+}
+
+/*Participants: Landon Mecham*/

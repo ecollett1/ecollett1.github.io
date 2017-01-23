@@ -1,0 +1,33 @@
+body {
+         font-family: "Comic Sans MS";
+         font-size: 12px;
+         background-color: rgb(255, 192, 255);  /* I made it pink! */
+}
+           
+.document {     
+         max-width: 500px;
+}
+            
+#title {
+         font-size: 24px;
+         text-align: center; 
+}
+            
+h1 {
+         font-size: 18px;
+         color: darkslategrey;
+      }
+            
+p {
+         font-size: 12px;
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+            
+h3 {
+         color: red;
+         text-align: center;
+         border: 2px dashed blue;
+      }
+
+/*Participants: Eric Collet, Landon Mecham, Jon Crawford*/

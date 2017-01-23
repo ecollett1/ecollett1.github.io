@@ -1,0 +1,51 @@
+body {
+         font-size:17px;
+         background-color: rgb(0, 224, 174);
+      }
+
+      h1 {
+         background-color: blue;
+         color: orange;
+         font-size: 300%;
+         font-style: Times New Roman;
+         text-transform: bold;
+         text-align: center;
+   
+      }
+
+      p {
+         background-color: red;
+         color: black;
+         text-align: center;
+         width: 100px;
+         height: 50px;
+         word-spacing: 2.0ch;
+         overflow: hidden;
+         resize: both;
+         word-wrap: break-word;
+      }
+
+
+      ul {
+         color: white;
+         font-size: 200%;
+      }
+
+      li {
+         background-color: silver;
+         color: yellow;
+         text-align: center;
+         font-size: 190%;
+      }
+
+      a: hover{
+         background-color: blue;
+         color: purple;
+         text-decoration: highlight;
+      }
+
+      a: visited {
+         background-color: white;
+         color: black;
+         font-size: 125%;
+      }

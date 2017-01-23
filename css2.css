@@ -1,0 +1,25 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h {
+    color: brown;
+    font-family: impact;
+    background-color: khaki;
+    border-style: ridge;
+    text-style: italic;
+}
+
+p {
+    color: firebrick;
+    font-family: tahoma;
+    border-style: groove;
+    background-color: gainsboro;
+}
+
+li {
+    color: red;
+    font-family: verdana;
+}
+
+/*Participants: Jon Crawford*/
