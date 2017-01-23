@@ -70,7 +70,7 @@ Number: <input type="text" id="number" size="20" value="2"/>
    
     function problem3(number1)
     {
-        var output = document.getElementById("output1");
+        var output = document.getElementById('output1');
         if (output.innerHTML.length != 0)
             output.innerHTML = "";
         
@@ -113,14 +113,14 @@ Number: <input type="text" id="number2" size="30" value="2"/>
 <button
         type="button"
         id="button2"
-        onclick="problem3(document.getElementById('number2').value)">
+        onclick="problem2(document.getElementById('number2').value)">
     For Loop
 </button>
 
 <button
         type="button"
         id="button3"
-        onclick="problem2(document.getElementById('number2').value)">
+        onclick="problem3(document.getElementById('number2').value)">
     While Loop
 </button>
 <div id="output1" style="font-weight:bold"></div>
