@@ -11,7 +11,7 @@
     </style>
   </head>
   <body>
-    <h1 style="text-align:center;">CS 213 Assignments</h1>
+    <h1 style="text-align:center;">CIT 261 Assignments</h1>
     
     <ul id="menu" style="list-style-type:none">
       <li><a href="public_html/week02/week02.html">Assignment week 4</a></li>
