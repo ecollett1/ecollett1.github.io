@@ -2,13 +2,14 @@
 <html>
   <head>
     <title>Eric Collett's Assignments</title>
-    <style href="C:\Users\ericm\Desktop\Github website files\css1.css">
+    <style>
       ul#menu li
         {
           text-align: left;
         }
       
     </style>
+    <link rel="stylesheet" href="C:\Users\ericm\Desktop\Github website files\css1.css">
   </head>
   <body>
     <h1 style="text-align:center;">CIT 261 Assignments</h1>
