@@ -60,27 +60,26 @@ Number: <input type="text" id="number" size="20" value="2"/>
 <!-- Second problem: Form Letter -->
 <script>
 
-    function problem2(number)
+    function problem2(num)
     {
        var numLoops = 0;
-       for (int i = number; i < 50; i++)
-          numLoops += 1;
+       for (int i = num; i < 50; i++)
+          numLoops++;
        alert(numLoops);
     }
    
     function problem3(number1)
     {
         var output = document.getElementById('output1');
-        if (output.innerHTML.length != 0) {
+        if (output.innerHTML.length != 0)
             output.innerHTML = "";
-        }
         
-        var html = output.innerHTML;
+        var html;
         
         do
         {
             html = output.innerHTML;
-            html += number + " ";
+            html += number1 + " ";
             if (number1 == 14 || number1 == 16)
                 html += "This is the last loop...";
             if (number1 < 14)
