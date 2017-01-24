@@ -69,12 +69,12 @@
         output.innerHTML = "";
     }
     var html;
-    while (i < 12) {
+    do {
         html = output.innerHTML;
         html += (i > 1 ? ", " : "") + integer + " x " + i + " = " + (integer * i);
         output.innerHTML = html;
         i++;
-    }  
+    } while (i < 12);
 }
 </script>
 
