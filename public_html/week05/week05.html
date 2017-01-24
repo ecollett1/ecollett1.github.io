@@ -57,28 +57,25 @@
        alert(numLoops);
     }
    
-    function problem3(number1)
-    {
-        var output = document.getElementById('output1');
-        if (output.innerHTML.length != 0)
-            output.innerHTML = "";
-        
-        var numbersOut;
-        
-        do
-        {
-            numbersOut = output.innerHTML;
-            numbersOut += number1 + " ";
-            if (number1 == 14 || number1 == 16)
-                numbersOut += "This is the last loop...";
-            if (number1 < 14)
-                number1++;
-            else
-                number1--;
-            output.innerHtml = numbersOut;
-        }
-        while(number1 != 15);
+    function computeTable() {
+
+    // Declaring some variables and pulling the integer from the HTML form. Nothing to see here.
+    var integer = parseInt(document.getElementById('number2').value);
+    var i = 1;
+
+    // Running the loop and doing all the arithmetic
+    var output = document.getElementById('output1');
+    if (output.innerHTML.length != 0) {
+        output.innerHTML = "";
     }
+    var html;
+    while (i < 12) {
+        html = output.innerHTML;
+        html += (i > 1 ? ", " : "") + integer + " x " + i + " = " + (integer * i);
+        output.innerHTML = html;
+        i++;
+    }  
+}
 </script>
 
 <h2>#1: Recursive</h2>
@@ -119,7 +116,7 @@ Number: <input type="text" id="number2" size="30" value="2"/>
 <button
         type="button"
         id="button3"
-        onclick="problem3(document.getElementById('number2').value)">
+        onclick="computeTable()">
     While Loop
 </button>
 <div id="output1" style="font-weight:bold"></div>
