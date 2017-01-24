@@ -63,7 +63,7 @@ Number: <input type="text" id="number" size="20" value="2"/>
     function problem2(num)
     {
        var numLoops = 0;
-       for (int i = num; i < 50; i++)
+       for (int i = num; i < (num + 10); i++)
           numLoops++;
        alert(numLoops);
     }
@@ -74,19 +74,19 @@ Number: <input type="text" id="number" size="20" value="2"/>
         if (output.innerHTML.length != 0)
             output.innerHTML = "";
         
-        var html;
+        var numbersOut;
         
         do
         {
-            html = output.innerHTML;
-            html += number1 + " ";
+            numbersOut = output.innerHTML;
+            numbersOut += number1 + " ";
             if (number1 == 14 || number1 == 16)
-                html += "This is the last loop...";
+                numbersOut += "This is the last loop...";
             if (number1 < 14)
                 number1++;
             else
                 number1--;
-            output.innerHtml = html;
+            output.innerHtml = numbersOut;
         }
         while(number1 != 15);
     }
