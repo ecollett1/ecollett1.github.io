@@ -57,7 +57,7 @@
        alert(numLoops);
     }
    
-    function computeTable() {
+    function problem3() {
 
     // Declaring some variables and pulling the integer from the HTML form. Nothing to see here.
     var integer = parseInt(document.getElementById('number2').value);
@@ -69,12 +69,18 @@
         output.innerHTML = "";
     }
     var html;
-    do {
+    while (integer != 15)
+    {
         html = output.innerHTML;
-        html += (i > 1 ? ", " : "") + integer + " x " + i + " = " + (integer * i);
+        html += integer + ", ";
+        if (integer == 14 || integer == 16)
+            html += "The last loop... ";
+        if (integer <= 14)
+            integer++;
+        else if (integer >= 16)
+            integer--;
         output.innerHTML = html;
-        i++;
-    } while (i < 12);
+    }
 }
 </script>
 
@@ -116,140 +122,10 @@ Number: <input type="text" id="number2" size="30" value="2"/>
 <button
         type="button"
         id="button3"
-        onclick="computeTable()">
+        onclick="problem3()">
     While Loop
 </button>
-<div id="output1" style="font-weight:bold">This should change...</div>
-<!-- Third problem: Temperature Conversion -->
-<script>
-
-   function problem4(fahrenheit)
-   {
-      var celsius = (5/9) * (fahrenheit - 32);
-      var celsiusReal = celsius.toFixed(1);
-      alert(celsiusReal);
-   }
-</script>
-
-<h2>#3: Temperature Conversion</h2>
-<p>Write the necessary JavaScript to convert Fahrenheit to Celsius. Display the resulting Celsius temperature in an alert.</p>
-
-Fahrenheit: <input type="text" id="text3" size="10" value="96.5"/>
-<button
-        type="button"
-        id="button4"
-        onclick="problem4(document.getElementById('text3').value)">
-    Problem 3
-</button>
-
-
-<!-- Fourth problem: Postage -->
-<script>
-
-   function problem4(weight)
-   {
-      var lowWeight = 1;
-      var highWeight = 5;
-      if (weight < lowWeight || weight > highWeight)
-         alert("Invalid weight");
-      else if (weight == 1)
-         alert("$0.98");
-      else if (weight == 2)
-         alert("$1.19");
-      else if (weight == 3)
-         alert("$1.40");
-      else if (weight == 4)
-         alert("$1.61");
-      else
-         alert("$1.82");
-      
-   }
-</script>
-<h2>#4: Postage</h2>
-<p>Write the necessary JavaScript to find the cost of postage for a large envelope. The rates are:</p>
-<table>
-    <tbody>
-    <tr>
-        <th>Weight not over<br/>(ounces)</th>
-        <th>Rate<br/>(dollars)</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>$0.98</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>$1.19</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>$1.40</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>$1.61</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>$1.82</td>
-    </tr>
-    </tbody>
-</table>
-<p>If an invalid weight is entered (a value other than 1 ... 5), then display an error message: "Invalid weight"</p>
-
-Weight: <input type="text" id="text4" size="3" value="3"/>
-<button
-        type="button"
-        id="button5"
-        onclick="problem4(document.getElementById('text4').value)">
-    Problem 4
-</button>
-
-
-<!-- Fifth problem: Loops -->
-<script>
-
-function problem5(apr1, term, amount)
-   {
-      var apr = apr1 / 100;
-
-      for (var i = 0; i < term; i++)
-      {
-         amount = amount*(1 + apr);
-      }
-      
-      var amount2 = amount.toFixed(2);
-      alert(amount2);
-   }
-</script>
-<h2>#5: Compound Interest</h2>
-<p>Write the necessary JavaScript to compute compound interest using a FOR loop taking into account the APR (Annual Percentage Rate), Term (time in years the loan will be in force), and Amount (the amount of the loan in dollars).</p>
-
-<table>
-    <tbody>
-    <tr>
-        <td>APR:</td>
-        <td><input type="text" id="apr5" value="7.1"/></td>
-        <td>%</td>
-    </tr>
-    <tr>
-        <td>Term:</td>
-        <td><input type="text" id="term5" size="10" value="5"/></td>
-        <td>years</td>
-    </tr>
-    <tr>
-        <td>Amount:</td>
-        <td><input type="text" id="amount5" size="10" value="25000"/></td>
-        <td>dollars</td>
-    </tr>
-    </tbody>
-</table>
-<button
-        type="button"
-        id="button6"
-        onclick="problem5(document.getElementById('apr5').value, document.getElementById('term5').value, document.getElementById('amount5').value)">
-    Problem 5
-</button>
+<div id="output1" style="font-weight:bold">While loop numbers</div>
 
 </body>
 </html>
