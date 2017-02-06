@@ -25,8 +25,24 @@
 		
 	   var parentText = document.getElementById("createNode");
 	   parentText.appendChild(newChild);
-	   
-	   window.setTimeout(domCreateChild, 10000);
+	}
+	
+	function domInsertBefore() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one above");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   newChild.insertBefore(parentText);	
+	}
+	    
+	function domRemoveChild() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one above");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   parentText.removeChild(document.getElementById("secondNode"));	
 	}
     </script>
   </head>
@@ -38,8 +54,12 @@
     <form action="" id="form1">
  	  <table>
         <tr>
-		<td><p id="createNode">This is the first parent node.</p>
+	  <td><p id="createNode">This is the first parent node.</p></td>
+	  <td><p id="secondNode">Second text to work with others.</p></td>
+
           <td><button onclick="domCreateChild()" style='color:blue'>Create Child</button></td>
+	  <td><button onclick="domInsertBefore()" style='color:green'>Insert Before</button></td>
+	  <td><button onclick="domRemoveChild()" style='color:red'>Remove Child</button></td>
         </tr>
       </table>
     </form>
