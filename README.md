@@ -22,7 +22,7 @@
       <br>
       <li><a href="public_html/week05/week05.html">Topic 1</a></li>
       <br>
-      <li><a href="public_html/week06/week06.html">Topic 2</a></li>
+      <li><a href="public_html/week06/topic 2.html">Topic 2</a></li>
       <br>
       <li><a href="public_html/week07/week07.html">Topic 3</a></li>
       <br>
