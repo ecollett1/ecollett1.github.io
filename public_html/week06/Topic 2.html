@@ -34,7 +34,7 @@
 		
 	   var parentText = document.getElementById("createNode");
 	   var childText = document.getElementById("secondNode");
-	   parentText.insertBefore(newChild, parentText);
+	   parentText.insertBefore(newChild, childText);
 	}
 	    
 	function domRemoveChild() {
@@ -56,7 +56,7 @@
 	  <td><p id="secondNode">Second text to work with others.</p></td>
 
           <td><button onclick="domCreateChild()" style='color:blue'>Create Child</button></td>
-	  <td><button onclick="domInsertBefore()" style='color:green'>Insert Before</button></td>
+	  <td><button onclick="domInsertBefore()" style='color:brown'>Insert Before</button></td>
 	  <td><button onclick="domRemoveChild()" style='color:red'>Remove Child</button></td>
         </tr>
       </table>
