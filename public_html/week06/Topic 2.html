@@ -29,19 +29,16 @@
 	
 	function domInsertBefore() {
 	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("This is the child node of the one above");
+	   var newNode = document.createTextNode("This is the child node of the one below");
 	   newChild.appendChild(newNode);
 		
 	   var parentText = document.getElementById("createNode");
-	   newChild.insertBefore(parentText);	
+	   parentText.insertBefore(newChild);
 	}
 	    
 	function domRemoveChild() {
-	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("This is the child node of the one above");
-	   newChild.appendChild(newNode);
-		
 	   var parentText = document.getElementById("createNode");
+	   parentText.appendChild(document.getElementById("secondNode"));
 	   parentText.removeChild(document.getElementById("secondNode"));	
 	}
     </script>
