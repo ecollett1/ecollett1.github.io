@@ -46,7 +46,7 @@
 	 
 	function domReplaceChild() {
 	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("This is the child node of the one below");
+	   var newNode = document.createTextNode("Replaced the text!");
 	   newChild.appendChild(newNode);
 		
 	   var parentText = document.getElementById("createNode");
@@ -74,7 +74,7 @@
           <td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
 	  <td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
 	  <td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
-	  <td><button onmousedown="domReplaceChild()" style='color:brown'>Remove Child</button></td>
+	  <td><button onmousedown="domReplaceChild()" style='color:brown'>Replace Child</button></td>
         </tr>
 		</table>
 	    </form>
