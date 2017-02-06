@@ -22,13 +22,13 @@
       <br>
       <li><a href="public_html/week05/week05.html">Topic 1</a></li>
       <br>
-      <li><a href="public_html/week06/week06.html">Week 06</a></li>
+      <li><a href="public_html/week06/week06.html">Topic 2</a></li>
       <br>
-      <li><a href="public_html/week07/week07.html">Week 07</a></li>
+      <li><a href="public_html/week07/week07.html">Topic 3</a></li>
       <br>
-      <li><a href="public_html/week08/week08.html">Week 08</a></li>
+      <li><a href="public_html/week08/week08.html">Topic 4</a></li>
       <br>
-      <li><a href="public_html/week09/week09.html">Week 09</a></li>
+      <li><a href="public_html/week09/week09.html">Topic 5</a></li>
       <br>
       <li><a href="public_html/week10/week10.html">Week 10</a></li>
       <br>
