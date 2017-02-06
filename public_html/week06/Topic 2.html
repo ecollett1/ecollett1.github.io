@@ -50,6 +50,13 @@
     <!-- First problem: Create Child -->
 	<h2>DOM</h2>
 	<p><strong>DOM Manipulation</strong></p>
+	<span><table align="right">
+	<tr>
+          <td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
+	  <td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
+	  <td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
+        </tr>
+		</table> </span>
     <form action="" id="form1">
  	  <table>
         <tr>
@@ -58,12 +65,5 @@
 	</tr>
 	    </table>
 	</form>
-      <table align="right">
-	<tr>
-          <td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
-	  <td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
-	  <td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
-        </tr>
-	    </table>
   </body>
 </html>
