@@ -26,7 +26,7 @@
 	   var parentText = document.getElementById("createNode");
 	   parentText.appendChild(newChild);
 	}
-	
+
 	function domInsertBefore() {
 	   var newChild = document.createElement("p");
 	   var newNode = document.createTextNode("This is the child node of the one below");
@@ -71,7 +71,7 @@
     <form>
 	<table>
 	<tr>
-          <td><button onclick="domCreateChild()" style='color:blue'>Create Child</button></td>
+          <td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
 	  <td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
 	  <td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
 	  <td><button onmousedown="domReplaceChild()" style='color:brown'>Replace Child</button></td>
