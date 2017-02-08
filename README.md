@@ -24,19 +24,6 @@
       <br>
       <li><a href="public_html/week06/Topic 2.html">Topic 2</a></li>
       <br>
-      <li><a href="public_html/week07/week07.html">Topic 3</a></li>
-      <br>
-      <li><a href="public_html/week08/week08.html">Topic 4</a></li>
-      <br>
-      <li><a href="public_html/week09/week09.html">Topic 5</a></li>
-      <br>
-      <li><a href="public_html/week10/week10.html">Week 10</a></li>
-      <br>
-      <li><a href="public_html/week11/week11.html">Week 11</a></li>
-      <br>
-      <li><a href="public_html/week12/week12.html">Week 12</a></li>
-      <br>
-      <li><a href="public_html/week13/week13.html">Week 13</a></li>
     </ul>
     
   </body>
