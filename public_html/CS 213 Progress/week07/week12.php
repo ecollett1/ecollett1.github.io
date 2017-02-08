@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>
+      <?php 
+        echo "Purchase Review";
+      ?>
+    </h1>
+    <p>
+      <?php
+        $firstName = $_POST["firstName"];
+        $lastName = $_POST["lastName"];
+        $phone = $_POST["phoneNumber"];
+        echo "$firstName";
+      ?>
+    </p>
+  </body>
+</html>

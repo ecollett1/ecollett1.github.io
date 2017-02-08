@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      div.relative {
+        position: relative;
+        left: 30px;
+      }
+      </style>
+    <script>
+      function draw()
+      {
+        var canvas = document.getElementById("canvas");
+           var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(75,75,40,0,Math.PI*2,true); // Outer circle
+        ctx.moveTo(107,75);
+        ctx.arc(75,75,33,0,Math.PI,false);  // Mouth (clockwise)
+        ctx.moveTo(63,65);
+        ctx.arc(60,63,3,0,Math.PI*2,true);  // Left eye
+        ctx.moveTo(92,65);
+        ctx.arc(90,63,3,0,Math.PI*2,true);  // Right eye
+        
+        ctx.moveTo(75, 70);
+        ctx.lineTo(70, 80);                 // Nose
+        ctx.lineTo(80, 80);
+        ctx.lineTo(75, 70);
+        
+        ctx.moveTo(75, 115);
+        ctx.lineTo(75, 300);                // Body
+        
+        ctx.moveTo(75, 175);
+        ctx.lineTo(175, 125);               // Right Hand
+        
+        ctx.moveTo(75, 175);
+        ctx.lineTo(0, 175);                 // Left Hand
+        
+        ctx.moveTo(75, 300);
+        ctx.lineTo(115, 375);               // Right Foot
+        
+        ctx.moveTo(75, 300);
+        ctx.lineTo(35, 375);                // Left Foot
+        
+        ctx.moveTo(100, 125);
+        ctx.lineTo(250, 125);               // Tray
+        ctx.lineTo(260, 115);
+        ctx.lineTo(90, 115);
+        ctx.lineTo(100, 125);
+        
+        ctx.moveTo(165, 115);
+        ctx.lineTo(155, 50);                // Fry box
+        ctx.moveTo(205, 50);
+        ctx.arc(180,50,25,0,Math.PI,false);
+        ctx.moveTo(205, 50);
+        ctx.lineTo(195, 115);
+        
+        ctx.moveTo(155, 50);
+        ctx.lineTo(157, 50);                //Fries
+        ctx.lineTo(157, 45);
+        ctx.lineTo(160, 65);
+        ctx.moveTo(157,45);
+        ctx.lineTo(160, 43);
+        ctx.lineTo(165, 70);
+        ctx.lineTo(170, 40);
+        ctx.moveTo(161, 50);
+        ctx.lineTo(169, 50);
+        ctx.moveTo(170, 40);
+        ctx.lineTo(175, 42);
+        ctx.lineTo(173, 75);
+        ctx.lineTo(183, 35);
+        ctx.lineTo(188, 35);
+        ctx.lineTo(178, 75);
+        ctx.lineTo(185, 50);
+        ctx.lineTo(189, 48);
+        ctx.lineTo(183, 75);
+        ctx.moveTo(189, 73);
+        ctx.lineTo(189, 35);
+        ctx.lineTo(194, 32);
+        ctx.lineTo(194, 70);
+        ctx.moveTo(194, 60);
+        ctx.lineTo(197, 45);
+        ctx.lineTo(202, 48);
+        ctx.lineTo(195, 65);
+        ctx.moveTo(175, 50);
+        ctx.lineTo(180, 50);
+        ctx.moveTo(201, 50);
+        ctx.lineTo(205, 50);
+        
+        ctx.moveTo(220, 115);
+        ctx.lineTo(210, 30);                // Drink
+        ctx.moveTo(255, 30);
+        ctx.arc(233,30,22,0,Math.PI*2,false);
+        ctx.moveTo(255, 30);
+        ctx.lineTo(245, 115);
+        ctx.moveTo(228, 30);
+        ctx.lineTo(238, 30);
+        ctx.moveTo(230, 30);
+        ctx.lineTo(230, 0);
+        ctx.lineTo(235, 0);
+        ctx.lineTo(235, 30);
+        ctx.moveTo(235, 25);
+        ctx.lineTo(230, 25);
+        ctx.moveTo(230, 20);
+        ctx.lineTo(235, 20);
+        ctx.moveTo(235, 15);
+        ctx.lineTo(230, 15);
+        ctx.moveTo(230, 10);
+        ctx.lineTo(235, 10);
+        ctx.moveTo(235, 5);
+        ctx.lineTo(230, 5);
+        
+        ctx.moveTo(150, 150);
+        ctx.lineTo(275, 150);               // Message Board
+        ctx.lineTo(275, 275);
+        ctx.lineTo(150, 275);
+        ctx.lineTo(150, 150);
+        
+        ctx.moveTo(165, 165);
+        ctx.lineTo(170, 180);               // WANT FRIES?
+        ctx.lineTo(175, 165);
+        ctx.lineTo(180, 180);
+        ctx.lineTo(185, 165);
+        ctx.moveTo(190, 180);
+        ctx.lineTo(195, 165);
+        ctx.lineTo(200, 180);
+        ctx.moveTo(192, 175);
+        ctx.lineTo(198, 175);
+        ctx.moveTo(205, 180);
+        ctx.lineTo(205, 165);
+        ctx.lineTo(215, 180);
+        ctx.lineTo(215, 165);
+        ctx.moveTo(220, 166);
+        ctx.lineTo(235, 166);
+        ctx.moveTo(228, 166);
+        ctx.lineTo(228, 181);
+        ctx.moveTo(185, 205);
+        ctx.lineTo(185, 190);
+        ctx.lineTo(195, 190);
+        ctx.moveTo(185, 198);
+        ctx.lineTo(190, 198);
+        ctx.moveTo(200, 205);
+        ctx.lineTo(200, 190);
+        ctx.lineTo(210, 190);
+        ctx.lineTo(210, 198);
+        ctx.lineTo(200, 198);
+        ctx.lineTo(210, 205);
+        ctx.moveTo(215, 205);
+        ctx.lineTo(215, 190);
+        ctx.moveTo(230, 205);
+        ctx.lineTo(220, 205);
+        ctx.lineTo(220, 190);
+        ctx.lineTo(230, 190);
+        ctx.moveTo(220, 197.5);
+        ctx.lineTo(225, 197.5);
+        ctx.moveTo(235, 205);
+        ctx.lineTo(245, 205);
+        ctx.lineTo(245, 197.5);
+        ctx.lineTo(235, 197.5);
+        ctx.lineTo(235, 190);
+        ctx.lineTo(245, 190);
+        ctx.moveTo(250, 195);
+        ctx.lineTo(250, 190);
+        ctx.lineTo(260, 190);
+        ctx.lineTo(260, 198);
+        ctx.lineTo(255, 198);
+        ctx.lineTo(255, 201);
+        ctx.moveTo(255, 205);
+        ctx.lineTo(255.5, 205);
+        ctx.stroke();
+      }
+    </script>
+    <title>Eric Collett's Personal Page</title>
+  </head>
+  <body onload="draw();">
+    <h1>Canvas API Page</h1>
+    <h2>Now Serving: </h2>
+    <div class="relative">
+      <canvas id="canvas" width="350" height="400"></canvas>
+    </div>
+    <p>This whole page other than the headers was done using Canvas API, here's where I learned how:
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
+    </p>
+    <br>
+    <a href="../index.html">Home Page</a>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bsa SYSTEM "BSA.dtd">
+<bsa>
+   <council name="Richland">
+      <troop number="216" unit_name="Flamingos">
+         <scout>
+            <firstname>Jason</firstname>
+            <lastname>Derullo</lastname>
+            <address>
+               <street>1st Street</street>
+               <city>Richland</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)967-4321</phone>
+            <rank date_earned="06-11-2016">Eagle</rank>
+            <meritbadge dateEarned="06-11-2016">Music</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Max</firstname>
+            <lastname>Mad</lastname>
+            <address>
+               <street>James Street</street>
+               <city>Richland</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)967-1234</phone>
+            <rank date_earned="08-08-2008">Tenderfoot</rank>
+            <meritbadge dateEarned="02-02-2002">Animation</meritbadge>
+         </scout>
+      </troop>
+      
+      <troop number="217" unit_name="Buffalos">
+         <scout>
+            <firstname>Mason</firstname>
+            <lastname>Nelson</lastname>
+            <address>
+               <street>2nd Street</street>
+               <city>Richland</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)967-1200</phone>
+            <rank date_earned="9-27-2014">Life</rank>
+            <meritbadge dateEarned="10-18-2010">Climbing</meritbadge>
+         </scout>
+      </troop>
+      
+      <troop number="218" unit_name="Cougars">
+         <scout>
+            <firstname>John</firstname>
+            <lastname>Doe</lastname>
+            <address>
+               <street>3rd Street</street>
+               <city>Richland</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)967-1000</phone>
+            <rank date_earned="1-7-2014">1stClass</rank>
+            <meritbadge dateEarned="12-25-2015">Search And Rescue</meritbadge>
+         </scout>
+      </troop>
+      
+   </council>
+   <council name="Pasco">
+      <troop number="219" unit_name="Elephants">
+         <scout>
+            <firstname>Lock</firstname>
+            <lastname>Gholdie</lastname>
+            <address>
+               <street>15th Street</street>
+               <city>Pasco</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)943-0800</phone>
+            <rank date_earned="04-19-2012">2ndClass</rank>
+            <meritbadge dateEarned="10-31-2015">Hunting</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Biggle</firstname>
+            <lastname>Omen</lastname>
+            <address>
+               <street>Wallop Street</street>
+               <city>Pasco</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)943-0060</phone>
+         </scout>
+      </troop>
+      
+      <troop number="220" unit_name="Jaguars">
+         <scout>
+            <firstname>Bryton</firstname>
+            <lastname>Starr</lastname>
+            <address>
+               <street>North Street</street>
+               <city>Pasco</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)943-0040</phone>
+            <rank date_earned="10-18-2015">Star</rank>
+            <meritbadge dateEarned="10-18-2015">Astronomy</meritbadge>
+         </scout>
+         <scout>
+            <firstname>Tom</firstname>
+            <lastname>Brady</lastname>
+            <address>
+               <street>5th Street</street>
+               <city>Pasco</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)943-0002</phone>
+            <rank date_earned="10-23-2015">Eagle</rank>
+         </scout>
+      </troop>
+      
+      <troop number="221" unit_name="Cobras">
+         <scout>
+            <firstname>Lone</firstname>
+            <lastname>Ranger</lastname>
+            <address>
+               <street>Alone Street</street>
+               <city>Pasco</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)943-1205</phone>
+         </scout>
+      </troop>
+      
+   </council>
+   <council name="Kennewick">
+      <troop number="222" unit_name="Groundhogs">
+         <scout>
+            <firstname>Payson</firstname>
+            <lastname>Roberts</lastname>
+            <address>
+               <street>Lost Street</street>
+               <city>Kennewick</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)992-1204</phone>
+         </scout>
+      </troop>
+      
+      <troop number="223" unit_name="Tadpoles">
+         <scout>
+            <firstname>Gerald</firstname>
+            <lastname>Rafferton</lastname>
+            <address>
+               <street>Long Street</street>
+               <city>Kennewick</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)992-1203</phone>
+         </scout>
+      </troop>
+      
+      <troop number="224" unit_name="Gorillas">
+         <scout>
+            <firstname>Tiny</firstname>
+            <lastname>Tim</lastname>
+            <address>
+               <street>Small Street</street>
+               <city>Kennewick</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)992-1202</phone>
+         </scout>
+         
+         <scout>
+            <firstname>Jimmy</firstname>
+            <lastname>Crickerson</lastname>
+            <address>
+               <street>Small Street</street>
+               <city>Kennewick</city>
+               <state>Washington</state>
+            </address>
+            <phone>(509)992-1201</phone>
+         </scout>
+      </troop>
+      
+   </council>
+</bsa>
