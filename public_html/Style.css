@@ -1,7 +1,7 @@
 body {
    font-family: "Times New Roman";
    font-size: 14px;
-   background-color: #5DD9C1;
+   background-color: skyblue;
    margin-top: 50px;
    margin-left: 75px;
    margin-right: 75px;
@@ -27,18 +27,18 @@ h1 {
 }
 
 .page2 {
-   color: #B084CC;
+   background-color: blue;
    font-family: "Times New Roman";
 }
 
 a:hover {
-   color: #B084CC;
+   color: white;
    font-size: 125%;
 }
 
 p {
-   background: skyblue;
-   color: blue;
+   background: blue;
+   color: lightblue;
    padding-left: 50px;
    padding-right: 50px;
 }
