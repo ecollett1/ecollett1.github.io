@@ -20,7 +20,7 @@
       <br>
       <li><a href="public_html/week06/Topic 2.html">Topic 2 CIT 261</a></li>
       <br>
-      <li><a href="public_html/Eric'sSite.html">Fully Integrated Site</a></li>
+      <li><a href="public_html/FullSite1.html">Fully Integrated Site</a></li>
       <br>
     </ul>
     
