@@ -27,7 +27,7 @@ h1 {
 }
 
 .page2 {
-   background-color: blue;
+   background-color: #69DDFF;
    font-family: "Times New Roman";
 }
 
@@ -37,8 +37,8 @@ a:hover {
 }
 
 p {
-   background: blue;
-   color: lightblue;
+   background: #69DDFF;
+   color: ;
    padding-left: 50px;
    padding-right: 50px;
 }
