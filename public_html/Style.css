@@ -1,11 +1,12 @@
 body {
+   opacity: 1;
    font-family: "Times New Roman";
    font-size: 14px;
    background-color: white;
-   margin-top: 50px;
-   margin-left: 75px;
-   margin-right: 75px;
-   margin-bottom: 50px;
+   margin-top: 25px;
+   margin-left: 50px;
+   margin-right: 50px;
+   margin-bottom: 25px;
    text-align: left;
    direction: ltr;
    border-style: hidden solid;
