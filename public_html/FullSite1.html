@@ -25,14 +25,22 @@
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
     
-    <script> document.body.className += 'fade-out'; </script>
-    <script> window.onload = load; </script>
-    <script> function load() {
-        document.body.removeClass('fade-out');
-      }
+    <script>
+      function fade(element) {
+        var op = 1;  // initial opacity
+        var timer = setInterval(function () {
+           if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+          }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+       }, 50);
+    }
     </script>
   </head>
-  <body id="mainContainer">
+  <body id="mainContainer" onload="fade(this)">
     <main>
       
     <h1 id="large">Coilett Industries</h1>
