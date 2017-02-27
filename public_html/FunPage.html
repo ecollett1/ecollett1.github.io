@@ -54,12 +54,12 @@
     <br> After you've finished testing your box growing skills, then attempt to write something
     <br> in the next box and just keep typing!  Wow, so much fun for the mind!</p>
     
-    <input type="text" name="Anything" onkeypress="textFunction()">
-    <div id="textChanger"></div>
+    <input type="text" id="Anything" onkeypress="textFunction()">
+    <div id="textChanger">This text needs to change...</div>
     <script>
       function textFunction() {
         text = "";
-        text = document.getElementsByName("Anything").value;
+        text += document.getElementById("Anything").value;
         document.getElementById("textChanger").innerhtml = text;
       }
     </script>
