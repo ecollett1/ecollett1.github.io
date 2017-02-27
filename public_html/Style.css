@@ -1,6 +1,4 @@
 body {
-   opacity: 1;
-   transition: 1s opacity;
    font-family: "Times New Roman";
    font-size: 14px;
    background-color: skyblue;
@@ -11,11 +9,6 @@ body {
    text-align: left;
    direction: ltr;
    border-style: hidden solid;
-}
-
-body .fade-out {
-   opacity: 0;
-   transition: none;
 }
 
 title {
