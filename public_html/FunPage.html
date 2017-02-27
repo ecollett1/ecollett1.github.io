@@ -43,6 +43,11 @@
       }
                              <!--Down to this point.-->
     </style>
+    <script>
+      function textFunction() {
+        document.getElementById("textChanger").innerhtml = document.getElementById("Anything").value;
+      }
+    </script>
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -56,11 +61,7 @@
     
     <input type="text" id="Anything" onkeydown="textFunction()">
     <p id="textChanger">This text...</p>
-    <script>
-      function textFunction() {
-        document.getElementById("textChanger").innerhtml = document.getElementById("Anything").value;
-      }
-    </script>
+    
     <p>Now see if you can find the hidden messages from a dropdown menu somewhere!</p>
     <br>
     
