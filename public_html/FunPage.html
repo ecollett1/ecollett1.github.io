@@ -58,8 +58,7 @@
     <p id="textChanger">This text...</p>
     <script>
       function textFunction() {
-        text = "";
-        text += document.getElementById("Anything").value;
+        text = document.getElementById("Anything").value;
         document.getElementById("textChanger").innerhtml = text;
       }
     </script>
