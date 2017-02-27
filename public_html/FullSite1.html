@@ -8,6 +8,11 @@
          background: white;
       }
       
+      body.fade-out {
+        opacity: 0;
+        transition: none;
+      }
+      
       span {
          display: block;
       }
@@ -19,6 +24,13 @@
     </style>
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    
+    <script> document.body.className += 'fade-out'; </script>
+    <script> window.onload = load(); </script>
+    <script> function load() {
+        document.body.className = '';
+      }
+    </script>
   </head>
   <body id="mainContainer">
     <main>
