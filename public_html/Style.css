@@ -12,7 +12,12 @@ body {
    direction: ltr;
    border-style: hidden solid;
 }
-            
+
+body .fade-out {
+   opacity: 0;
+   transition: none;
+}
+
 title {
    font-size: 20px;
    text-align: center; 
