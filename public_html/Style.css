@@ -3,7 +3,7 @@ body {
    transition: 1s opacity;
    font-family: "Times New Roman";
    font-size: 14px;
-   background-color: white;
+   background-color: skyblue;
    margin-top: 25px;
    margin-left: 50px;
    margin-right: 50px;
@@ -29,7 +29,7 @@ h1 {
 }
 
 main {
-   background-color: skyblue;
+   background-color: white;
    
 }
 #large {
