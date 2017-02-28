@@ -8,7 +8,7 @@
          background: white;
       }
       
-      body.fade-out {
+      .fade-out {
         opacity: 0;
         transition: none;
       }
@@ -28,18 +28,14 @@
       
       function load() {
         var opacity = 0.0;
-        document.body.style.opacity = opacity;
-        while (opacity < 1)
-        {
-          setTimeout(function () {document.body.style.opacity = opacity;} , 2000);
-          opacity += .1;
-        }
+        document.body.style.opacity = 1;
+        document.body.style.transition = '1s opacity';
       }
       
       window.onload = load;
     </script>
   </head>
-  <body id="mainContainer" >
+  <body id="mainContainer" class="fade-out" >
     <main>
       
     <h1 id="large">Coilett Industries</h1>
