@@ -25,12 +25,14 @@
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script>
-      var opacity = 0.0;
+      
       function load() {
+        var opacity = 0.0;
         document.body.style.opacity = opacity;
-        opacity += 0.1;
-        if (opacity != 1)
-          setTimeout(load(), 3000);
+        while (opacity < 1)
+        {
+          setTimeout(function () {document.body.style.opacity += .1;} , 2000);
+        }
       }
       
       window.onload = load;
