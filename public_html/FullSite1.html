@@ -24,9 +24,18 @@
     </style>
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-    
+    <script>
+      window.onload = function fadeIn() {
+        var opacity = 0;
+        while (opacity < 1)
+        {
+          document.body.opacity += opacity;
+          opacity += .1;
+        }
+      }
+    </script>
   </head>
-  <body id="mainContainer">
+  <body id="mainContainer" >
     <main>
       
     <h1 id="large">Coilett Industries</h1>
