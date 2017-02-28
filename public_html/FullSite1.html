@@ -31,7 +31,8 @@
         document.body.style.opacity = opacity;
         while (opacity < 1)
         {
-          setTimeout(function () {document.body.style.opacity += .1;} , 2000);
+          setTimeout(function () {document.body.style.opacity = opacity;} , 2000);
+          opacity += .1;
         }
       }
       
