@@ -29,6 +29,17 @@
     </style>
     <title>Coilett Industries</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    
+    <script>
+      
+      function load() {
+        var opacity = 0.0;
+        document.body.style.opacity = 1;
+        document.body.style.transition = '1s opacity';
+      }
+      
+      window.onload = load;
+    </script>
     <script>
       function draw()
       {
@@ -191,20 +202,9 @@
         ctx.stroke();
       }
     </script>
-    <script>
-      
-      function load() {
-        var opacity = 0.0;
-        document.body.style.opacity = 1;
-        document.body.style.transition = '1s opacity';
-        draw();
-      }
-      
-      window.onload = load;
-    </script>
   </head>
   <body id="mainContainer" class="fade-out">
-    <main>
+    <main onload="draw()">
       
     <h1 id="large">Coilett Industries</h1>
     <h2>Introduction</h2>
