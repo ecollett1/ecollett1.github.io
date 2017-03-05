@@ -203,7 +203,7 @@
     </script>
   </head>
   <body id="mainContainer" class="fade-out">
-    <main>
+    <main onLoad="draw()">
       
     <h1 id="large">Coilett Industries</h1>
     <h2>Introduction</h2>
@@ -227,7 +227,7 @@
     
     <h3>Canvas API</h3>
     <h4>Now Serving: </h4>
-    <div class="relative" onLoad="draw()">
+    <div class="relative">
       <canvas id="canvas" width="350" height="400"></canvas>
     </div>
     <p>This whole section other than the headers was done using Canvas API, here's where I learned how:
