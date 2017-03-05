@@ -192,6 +192,11 @@
         ctx.stroke();
       }
     </script>
+    
+    <script>
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    </script>
+    
     <script>
       
       function load() {
@@ -215,8 +220,8 @@
     
     <script>
       document.getElementById("p1").style.color = "red";
-      document.getElementById("p1").style.backgroundColor = "black";
-      document.getElementById("p1").style.border = "medium solid white";
+      document.getElementById("p1").style.backgroundColor = "randomColor";
+      document.getElementById("p1").style.border = "medium solid black";
     </script>
     
     <button type="button" onclick="document.getElementById('p1').style.color = 'blue'">
