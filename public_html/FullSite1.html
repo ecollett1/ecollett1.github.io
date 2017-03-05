@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <style>
       .normal {                    <!--These are all the original styles for the page, not included in the .css stylesheet-->
          font-size: 12px;
@@ -204,7 +202,7 @@
       }
     </script>
   </head>
-  <body id="mainContainer" class="fade-out" onLoad="draw()">
+  <body id="mainContainer" class="fade-out">
     <main>
       
     <h1 id="large">Coilett Industries</h1>
@@ -227,9 +225,9 @@
     <button type="button" onclick="document.querySelector('#mainContainer').style.backgroundColor = 'orange'">Change the page</button>
     <br>
     
-    <h1>Canvas API</h1>
-    <h2>Now Serving: </h2>
-    <div class="relative">
+    <h3>Canvas API</h3>
+    <h4>Now Serving: </h4>
+    <div class="relative" onLoad="draw()">
       <canvas id="canvas" width="350" height="400"></canvas>
     </div>
     <p>This whole section other than the headers was done using Canvas API, here's where I learned how:
