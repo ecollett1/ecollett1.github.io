@@ -243,6 +243,22 @@
     <div class="relative">
       <canvas id="canvas" width="350" height="400"></canvas>
     </div>
+      
+      <progress id="progress" value="0" max="100">
+      </progress>
+      <script>
+	      var progress = 0;
+          moveForward();
+    
+          function moveForward() {
+    	      var x = document.getElementById("progress");
+              progress++;
+             if (progress > 100) { progress = 0;}
+             x.value = progress;
+        
+             setTimeout(moveForward, 100);
+         }
+      </script>
     <div style="margin-left: auto;margin-right: auto;">
       <br>
       <iframe width="854" height="480" src="https://www.youtube.com/embed/StTqXEQ2l-Y" frameborder="0" allowfullscreen></iframe>
