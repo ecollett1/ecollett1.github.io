@@ -209,45 +209,6 @@
       
       window.onload = load;
     </script>
-    
-    <script>   //DOM Manipulation
-	function domCreateChild() {
-	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("This is the child node of the one above");
-	   newChild.appendChild(newNode);
-		
-	   var parentText = document.getElementById("createNode");
-	   parentText.appendChild(newChild);
-	}
-
-	function domInsertBefore() {
-	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("This is the child node of the one below");
-	   newChild.appendChild(newNode);
-		
-	   var parentText = document.getElementById("createNode");
-	   var childText = document.getElementById("secondNode");
-	   parentText.appendChild(childText);
-	   parentText.insertBefore(newChild, childText);
-	}
-	    
-	function domRemoveChild() {
-	   var parentText = document.getElementById("createNode");
-	   parentText.appendChild(document.getElementById("secondNode"));
-	   parentText.removeChild(document.getElementById("secondNode"));	
-	}
-	 
-	function domReplaceChild() {
-	   var newChild = document.createElement("p");
-	   var newNode = document.createTextNode("Replaced the text!");
-	   newChild.appendChild(newNode);
-		
-	   var parentText = document.getElementById("createNode");
-	   var childText = document.getElementById("secondNode");
-	   parentText.appendChild(childText);
-	   parentText.replaceChild(newChild, childText);
-	}
-    </script>
   </head>
   <body id="mainContainer" class="fade-out">
     <main>
@@ -388,7 +349,62 @@
 		</table>
 	    </form>
 	</form>
+    <script>   //DOM Manipulation
+	function domCreateChild() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one above");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   parentText.appendChild(newChild);
+	}
+
+	function domInsertBefore() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one below");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   var childText = document.getElementById("secondNode");
+	   parentText.appendChild(childText);
+	   parentText.insertBefore(newChild, childText);
+	}
+	    
+	function domRemoveChild() {
+	   var parentText = document.getElementById("createNode");
+	   parentText.appendChild(document.getElementById("secondNode"));
+	   parentText.removeChild(document.getElementById("secondNode"));	
+	}
+	 
+	function domReplaceChild() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("Replaced the text!");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   var childText = document.getElementById("secondNode");
+	   parentText.appendChild(childText);
+	   parentText.replaceChild(newChild, childText);
+	}
+    </script>
 	<br><br>
+	<h10>Local Storage Testing!</h10>
+	<input type="text" value="type here" onkeypress="localS()"/>
+	<p id="result">Watch this text change!</p>
+
+	<script>
+	function localS() {
+	  if (typeof(Storage) !== "undefined") {
+    	    localStorage.setItem("text", document.getElementById("result").value);
+
+    	    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+	  }
+	  else {
+            // Sorry! No Web Storage support..
+	  }
+	}
+	</script>
+	<br><br><br><br>
     <h1>End Of Page</h1>
     <p class="important">If you really want to go to the next page just make sure you click on the link for page 2.
     The "Home Directory" link will bring you back to the original page, and the "Week 03 Team assignment" will bring
