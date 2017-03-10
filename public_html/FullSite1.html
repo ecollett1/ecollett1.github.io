@@ -268,7 +268,67 @@
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
     </p>
     <br>
+    <br><br>
+    <h5>AJAX examples</h5>
     
+    <pre id="toReplace"><p>Choose a country to display the 10 largest cities with their populations:</p></pre>
+
+    <select class="dropdown" onchange="loadDoc(this)">
+      <option value="default.txt">Default</option>
+      <option value="canada.txt">Canada</option>
+      <option value="usa.txt">USA</option>
+      <option value="russia.txt">Russia</option>
+      <option value="mexico.txt">Mexico</option>
+    </select>
+    <script>
+      function loadDoc(tag) {
+      console.log(tag.value);
+      var text = new XMLHttpRequest();
+      text.onreadystatechange = function() {
+        if (text.readyState == 4 && text.status == 200) 
+        {
+          document.getElementById("toReplace").innerHTML = text.responseText;
+        }
+      };
+      text.open("GET", tag.value, true);
+      text.send();
+      }
+    </script>
+    <h6 id="large">Parsing JSON files</h6>
+    
+    <div id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
+    <input type="text" id="location" value="json.txt"/>
+    <input type="button" onclick="loadJson()" value="Submit URL"/>
+    <br><br>
+    <a href="../index.html">Home Page</a>
+    <script>
+      function loadJson() {
+      var toParse = new XMLHttpRequest();
+      var url = document.getElementById("location").value;
+      toParse.onreadystatechange = function() {
+        if (toParse.readyState == 4 && toParse.status == 200) 
+        {
+          var array = JSON.parse(toParse.responseText);
+          myFunction(array);
+        }
+      };
+      toParse.open("GET", url, true);
+      toParse.send();
+      }
+      
+      function myFunction(array)
+      {
+        var out = "Students: <br>";
+        var i;
+        for (i = 0; i < array.length; i++)
+        {
+          out += "<p><strong>" + array[i].first + " " + array[i].last + "</strong> - " + array[i].address.city +  ", " + 
+          array[i].address.state + " " +  array[i].address.zip + "<br>Major in: " + array[i].major + 
+          "<br>GPA: " + array[i].gpa + "</p>";
+        }
+        document.getElementById("toReplace2").innerHTML = out;
+      }
+      </script>
     <h1>End Of Page</h1>
     <p class="important">If you really want to go to the next page just make sure you click on the link for page 2.
     The "Home Directory" link will bring you back to the original page, and the "Week 03 Team assignment" will bring
