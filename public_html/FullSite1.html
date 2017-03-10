@@ -198,7 +198,7 @@
       var randomColor = Math.floor(Math.random()*16777215).toString(16);
     </script>
     
-    <script>
+    <script>   //Page Fade in
       
       function load() {
         var opacity = 0.0;
@@ -210,6 +210,44 @@
       window.onload = load;
     </script>
     
+    <script>   //DOM Manipulation
+	function domCreateChild() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one above");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   parentText.appendChild(newChild);
+	}
+
+	function domInsertBefore() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("This is the child node of the one below");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   var childText = document.getElementById("secondNode");
+	   parentText.appendChild(childText);
+	   parentText.insertBefore(newChild, childText);
+	}
+	    
+	function domRemoveChild() {
+	   var parentText = document.getElementById("createNode");
+	   parentText.appendChild(document.getElementById("secondNode"));
+	   parentText.removeChild(document.getElementById("secondNode"));	
+	}
+	 
+	function domReplaceChild() {
+	   var newChild = document.createElement("p");
+	   var newNode = document.createTextNode("Replaced the text!");
+	   newChild.appendChild(newNode);
+		
+	   var parentText = document.getElementById("createNode");
+	   var childText = document.getElementById("secondNode");
+	   parentText.appendChild(childText);
+	   parentText.replaceChild(newChild, childText);
+	}
+    </script>
   </head>
   <body id="mainContainer" class="fade-out">
     <main>
