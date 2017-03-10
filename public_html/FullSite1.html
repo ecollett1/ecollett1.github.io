@@ -397,10 +397,10 @@
 	  if (typeof(Storage) !== "undefined") {
     	    localStorage.setItem("text", document.getElementById("result").value);
 
-    	    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    	    document.getElementById("result").innerHTML = localStorage.getItem("text");
 	  }
 	  else {
-            // Sorry! No Web Storage support..
+	    alert("Your browser doesn't support local storage...");
 	  }
 	}
 	</script>
