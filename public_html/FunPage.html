@@ -1,100 +1,92 @@
 <!DOCTYPE html>
-<html>
+<!--
+    CIT 261 Ad Lib App Project
+    Created on : March 14, 2017, 7:42:45 AM
+    Author     : Eric Collett, Brandon Trimble and Max Gerasymenko
+ -->
+<html lang="en-us">
   <head>
-    <style>
-      .normal {
-         font-size: 12px;    <!--These are all the original styles for the page, not included in the .css stylesheet-->
-         color: black;
-         background: white;
-      }
-      
-      .dropdown {
-         position: relative;
-         display: inline-block;
-      }
-      
-      .dropdown-content {
-         display: none;
-         position: absolute;
-         background-color: blue;
-      }
-      
-      .dropdown:hover .dropdown-content {
-         display: block;
-      }
-      body {
-         background-color: skyblue;
-      }
-      
-      span {
-         display: block;
-      }
-      
-      .center {
-         text-align: center;
-      }
-      
-      .resize {
-         overflow: hidden;
-         resize: both;
-         height: 25px;
-         width: 50px;
-         background-color: lightblue;
-      }
-                             <!--Down to this point.-->
-    </style>
-    <script>
-      function textFunction() {
-        document.getElementById("textChanger").innerHTML = document.getElementById("Anything").value;
-      }
-    </script>
-    <title>Coilett Industries</title>
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- End Meta Tags -->
+
+    <!-- Style Sheets -->
+    <link href="css/layout.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Layout Style Sheet -->
+    <link href="css/styling.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Styling Style Sheet -->
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Media Queries Style Sheet -->
+    <!-- End Style Sheets -->
+    
+    <!-- JavaScript -->
+    <script src="javascript/js.js"></script>
+    <!-- End JavaScript -->
+
+    <!-- Logo -->
+    <link rel="icon" type="image/png" href="images/mainLogo.png" />
+
+    <title>Ad Lib Game</title>
   </head>
-  <body>
-    <h1 id="large">Coilett Industries: Fun Page</h1>
-    <h2>Stuff To Do</h2>
+
+  <body id="snow">
+      <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
+        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
+    <header>
+      <h1 class="center">Ad Lib Game</h1>
+
+      <p class="center">
+        Welcome to the ad lib game, [name]! Please choose a story! <!-- TODO: Replace [name] with user's name taken from onload event storing name in local storage. -->
+      </p>
+    </header>
+
+    <section>
+        <div>
+          <div id="albert" value="alber.txt" onclick="readFile(this.id)" onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" >
+            Albert Einstein
+          </div>
+
+          <div id="alice" value="alice.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)">
+            Alice 
+          </div>
+        </div>
+
+      <hr />
+        
+      <div style="width: 100%">
+        <div style="float: left; width: 30%;" id="div1"></div>
+        <div style="float: left; width: 40%;" id="div2">
+            <p id="par" style="visibility:hidden;">Noun : </p> 
+            <input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+
+            <p id="par1" style="visibility:hidden;">Verb : </p>
+            <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par2" style="visibility:hidden;">Place : </p> 
+            <input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par3" style="visibility:hidden;">Adjective : </p>
+            <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+            <p id="par4" style="visibility:hidden;">Pronoun : </p> 
+            <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
+        </div>
     
-    <p class="resize">First, start by resizing this box to make things a little more interesting.
-    <br> After you've finished testing your box growing skills, then attempt to write something
-    <br> in the next box and just keep typing!  Wow, so much fun for the mind!</p>
-    
-    <input type="text" id="Anything" onkeyup="textFunction()" value="Type Here">
-    <div id="textChanger"></div>
-    
-    <p>Now see if you can find the hidden messages from a dropdown menu somewhere!</p>
-    <br>
-    
-    <div class="dropdown">
-       <span class="normal">Since we're not fully started as a company other than online</span>
-       <span class="normal">sometimes we just get really bored because people don't want to come in.</span>
-       <div class="dropdown-content" onmouseover="dropdown(this)">
-         <p>AH! Good job!  You found it!  Now you can stop hovering and not have to worry,
-         and then hover over again just because it's fun! </p>
+        <div style="float: left; width: 30%;" id="div3"></div>
+          
+        <br style="clear: left;" />
+
        </div>
-      <script>
-        function dropdown(ele) {
-          var id = ele.id;
-          document.getElementById(id).className = "dropdown-content";
-        }
-      </script>
-    </div>
+        
        <br>
-    <p>Here's a link to get your brain working with fun challenging math games. </p>
-    <a href="http://www.coolmath-games.com/">http://www.coolmath-games.com/</a>
-    <br>
-    
-    <h1>End Of Page</h1>
-    <p class="important">If you really want to go back to the first page and <i>learn</i> just make sure you click on the link for the Home Page.
-    The "Home Directory" link will bring you back to the original page.</p>
-    
-    <blockquote id="large">
-      Don't go breaking my heart - <strong> Elton John </strong>
-    </blockquote>
-    
-    <a href="FullSite1.html">Home Page</a>
-    <br>
-    <a href="../index.html">Home Directory</a>
-    <br>
+       <br>
+
+       <button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
+       <br>
+       <br>
+       <br>
+        
+       <div class="myStory" id="result"></div>
+
+    </section>
+
   </body>
 </html>
