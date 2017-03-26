@@ -3,3 +3,21 @@
  * Styling of content is to be kept separate. Media queries/responsiveness is
  * also to be kept separate.
  ******************************************************************************/
+.center{
+ 	text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;  
+ }
+
+#albert, #alice{
+  margin: 0 auto;
+}
+
+#div1{
+    height: 400px;
+    text-align: center;
+}
+
+#div3{
+    height: 400px;
+    text-align: center;
+}

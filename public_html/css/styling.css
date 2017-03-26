@@ -3,3 +3,106 @@
  * i.e. colors, typography, sizes etc. All layout and styling css to be kept
  * separate.
  ******************************************************************************/
+html{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+ p{
+    color: blue;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+
+div{
+    color: blue;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+
+.myStory{
+    color: blue;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    width: 45%;
+}
+
+.input{
+      text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button
+{
+	background-color: DarkBlue; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    cursor: pointer;
+    margin: auto;
+    padding: 14px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2 {
+    background-color: MediumBlue; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-left: 40%;
+    width: 20%;
+    border: 3px solid DodgerBlue;
+    padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2:hover {
+    background-color: DodgerBlue;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index:4;
+    -webkit-animation: snow 5s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 5s linear infinite;
+    animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
