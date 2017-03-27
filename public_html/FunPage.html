@@ -89,12 +89,12 @@
        <br>
         
        <div>
-           <img class="pictures" src="images/fenrir1.jpg" style="width:75%;display:none;align-content:center">
-           <img class="pictures" src="images/fenrir_howl.jpg" style="width:75%;display:none;align-content:center">
-           <img class="pictures" src="images/fenrir_pup.jpg" style="width:75%;display:none;align-content:center">
+           <img class="pictures" src="images/fenrir1.jpg" style="width:75%;display:none;align-self:center">
+           <img class="pictures" src="images/fenrir_howl.jpg" style="width:75%;display:none;align-self:center">
+           <img class="pictures" src="images/fenrir_pup.jpg" style="width:75%;display:none;align-self:center">
 
-           <button onclick="nextSlide(-1)">&#10094;</button>
-           <button onclick="nextSlide(1)">&#10095;</button>
+           <button style="display:none" id="prevPic" onclick="nextSlide(-1)">&#10094;</button>
+           <button style="display:none" id="nextPic" onclick="nextSlide(1)">&#10095;</button>
            <div class="myStory" id="result"></div> 
        </div>
 
