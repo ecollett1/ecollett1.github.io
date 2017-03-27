@@ -93,8 +93,7 @@ function display()
                        .replace(/_pro/ig, pronoun)
                        .replace(/_place/ig, place);
 
-        var slide = 0;
-        changePicture();
+        nextSlide(0);
 
 	document.getElementById('result').innerHTML = myStr;
         document.getElementById('result').style.background = "LightBlue";
