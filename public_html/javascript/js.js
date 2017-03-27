@@ -94,7 +94,9 @@ function display()
                        .replace(/_place/ig, place);
 
         nextSlide(0);
-
+	document.getElementById('prevPic').style.display = "block";
+        document.getElementById('nextPic').style.display = "block";
+	
 	document.getElementById('result').innerHTML = myStr;
         document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
