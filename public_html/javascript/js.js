@@ -1,4 +1,6 @@
 var res = "";
+var slideNum = 1;
+
 function readFile(elementId){
     var xmlhttp;
     resetData();
@@ -90,10 +92,36 @@ function display()
                        .replace(/_adjective/ig, adjective)
                        .replace(/_pro/ig, pronoun)
                        .replace(/_place/ig, place);
-               
+
+        var slide = 0;
+        changePicture();
+
 	document.getElementById('result').innerHTML = myStr;
         document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
+}
+
+function nextSlide(n) {
+    changePicture(slideNum += n);
+}
+
+function changePicture(n) {
+    var number;
+    var slideNumber = document.getElementsByClassName("pictures");
+
+    if (n > slideNumber.length)
+    {
+        slideNum = 1;
+    }
+    else if (n < 1)
+    {
+        slideNum = slideNumber.length;
+    }
+    for (var i = 0; i < slideNumber.length; i++)
+    {
+        slideNumber[i].style.display = "none";
+    }
+    slideNumber[slideNum - 1].style.display = "block";
 }
 
 function resetData()
