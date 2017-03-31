@@ -28,8 +28,8 @@
   </head>
 
   <body id="snow">
-<!--       <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
-        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe> -->
+      <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
+        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
     <header>
       <h1 class="center">Ad Lib Game</h1>
       
@@ -40,20 +40,18 @@
             <h2>Welcome!</h2>
             
             <p>Enter your name to get started!</p>
-<!--             <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
-        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe> -->
-<h1 class="center">Welcome to a story</h1>
-<p class="center">Choose your story : </p>
-<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="stories.txt" 
-onclick="readFile(this.id)" 
->Albert Einstein</div>
-<div id="alice" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
-onmouseleave="changeBack(this.id)">
-Alice </div>
-<hr>
-<div style="width: 100%">
- <div style="float: left; width: 30%;" id="div1"></div>
- <div style="float: left; width: 40%;" id="div2">
+            
+            <form>
+                <p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
+                <input type="submit" name="submit" value="Submit!" onclick="welcomeUser()" />
+            </form>
+        </div>
+
+      <hr />
+        
+      <div style="width: 100%">
+        <div style="float: left; width: 30%;" id="div1"></div>
+        <div style="float: left; width: 40%;" id="div2">
             <p id="par" style="visibility:hidden;">Noun : </p> 
             <input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
 
