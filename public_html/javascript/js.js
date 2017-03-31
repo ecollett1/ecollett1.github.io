@@ -1,10 +1,80 @@
+/*******************************************************************************
+ * Local Storage/Onload event prompt for user name
+ * ****************************************************************************/
+
+function storeUsername() 
+{
+    if (window.localStorage)
+    {
+        var txtUsername = document.getElementById('inputUser');
+        
+        txtUsername.value = localStorage.getItem('username');
+        
+        txtUsername.addEventListener('input', function()
+        {
+            localStorage.setItem('username', txtUsername.value);
+        }, false);
+    }
+    else
+    {
+        window.alert('Local Storage is not supported by your browser!');
+    }
+    
+    return txtUsername;
+}
+
+function welcomeUser()
+{
+    storeUsername();
+    
+    var txtUsername = localStorage.username;
+    
+    var message = '<p class="center">Welcome to the ad lib game, ';
+    message += txtUsername + '! Please choose a story!</p>'; // TODO: Test the local storage call.
+    
+    var createWelcome = document.createElement('div');
+    createWelcome.setAttribute('id', 'welcome');
+    createWelcome.innerHTML = message;
+    document.body.appendChild(createWelcome);
+    
+    var createStories = document.createElement('div');
+    
+    var albertStory = document.createElement('div');
+    albertStory.setAttribute('id', 'albert');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Albert Einstein';
+    
+    var aliceStory = document.createElement('div');
+    albertStory.setAttribute('id', 'alice');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Alice';
+    
+    var fenrirStory = document.createElement('div');
+    albertStory.setAttribute('id', 'fenrir');
+    albertStory.setAttribute('value', 'stories.txt');
+    albertStory.setAttribute('onclick', 'readFile(this.id)');
+    albertStory.setAttribute('onmouseover', 'ChangeColor(this.id)');
+    albertStory.setAttribute('onmouseleave', 'changeBack(this.id)');
+    albertStory.innerHTML = 'Fenrir';
+}
+// End Username prompt menu
+
 var res = "";
 var slideNum = 1;
 
-function readFile(elementId){
-    var xmlhttp;
+function readFile(elementId)
+{
+   var xmlhttp;
+
     resetData();
     setData(elementId);
+
     if(window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();
     }else{
@@ -13,10 +83,12 @@ function readFile(elementId){
     
    
     var text = document.getElementById(elementId).getAttribute('value');
+    var idName = document.getElementById(elementId).id;
+  
     xmlhttp.onreadystatechange = function(){ 
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var myStory = xmlhttp.responseText;
-            replace(myStory);
+            var myStory = JSON.parse(xmlhttp.responseText);
+            replace(myStory, idName);
            
         }
     }
@@ -53,7 +125,18 @@ function setData(elementId)
 function replace(myStory)
 {
  
-	 res = myStory;
+	  var i = 0;
+
+   while(i < myStory.stories.length){
+  
+    	if(myStory.stories[i].storyName === idName)
+   		{
+        	res = myStory.stories[i].content;
+        	break;
+    	}
+
+        i++;   
+    }
 }
 
 function ChangeColor(elementId)
@@ -81,22 +164,26 @@ function mUp(obj) {
 
 function display()
 {
-	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
+var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
 	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
 	var adjective = document.getElementById("_adjective").value.bold().sup().fontcolor("white");
 	var pronoun = document.getElementById("_pro").value.bold().sup().fontcolor("white");
 	var place = document.getElementById("_place").value.bold().sup().fontcolor("white"); 
-	
-        var myStr = res.replace(/_noun/ig, noun)
-                       .replace(/_verb/ig, verb)
-                       .replace(/_adjective/ig, adjective)
-                       .replace(/_pro/ig, pronoun)
-                       .replace(/_place/ig, place);
 
-        nextSlide(0);
-	
-	document.getElementById('result').innerHTML = myStr;
-        document.getElementById('result').style.background = "LightBlue";
+
+    var myObjStr = JSON.stringify(res);
+
+	var myNewStory = myObjStr.replace(/_noun/ig, noun)
+					.replace(/_verb/ig, verb)
+					.replace(/_adjective/ig, adjective)
+	 				.replace(/_pro/ig, pronoun)
+	 				.replace(/_place/ig, place)
+	 				.replace("[","")
+   	                .replace("]","")
+   	                .replace(/\"/g,"");
+
+	document.getElementById('result').innerHTML = myNewStory;
+    document.getElementById('result').style.background = "LightBlue";
 	document.getElementById('result').scrollIntoView();
 }
 
