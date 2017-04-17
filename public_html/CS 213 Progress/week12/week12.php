@@ -24,27 +24,27 @@
         ?>
       </h1>
       <p id="important">
-        <form action="continue.php" id="form2" method="post">
+        <form action="continue.php" id="form2" method="get">
           <?php
-            $firstName = $_POST["firstName"];
-            $lastName = $_POST["lastName"];
-            $phone = $_POST["phoneNumber"];
-            $address = $_POST["Address"];
-            $apartment = $_POST["Apartment"];
-            $city = $_POST["City"];
-            $state = $_POST["State"];
-            $zip = $_POST["zip"];
-            $type = $_POST["credType"];
-            $card = $_POST["card"];
-            $code = $_POST["security"];
-            $month = $_POST["month"];
-            $year = $_POST["year"];
-            $total = $_POST["total"];
+            $firstName = $_GET["firstName"];
+            $lastName = $_GET["lastName"];
+            $phone = $_GET["phoneNumber"];
+            $address = $_GET["Address"];
+            $apartment = $_GET["Apartment"];
+            $city = $_GET["City"];
+            $state = $_GET["State"];
+            $zip = $_GET["zip"];
+            $type = $_GET["credType"];
+            $card = $_GET["card"];
+            $code = $_GET["security"];
+            $month = $_GET["month"];
+            $year = $_GET["year"];
+            $total = $_GET["total"];
             
-            $taser = $_POST["qty1"];
-            $lightbulb = $_POST["qty2"];
-            $toaster = $_POST["qty3"];
-            $computer = $_POST["qty4"];
+            $taser = $_GET["qty1"];
+            $lightbulb = $_GET["qty2"];
+            $toaster = $_GET["qty3"];
+            $computer = $_GET["qty4"];
             echo "<strong>Name:</strong> " . $firstName . " " . $lastName . "<br>";
             echo "<strong>Phone Number:</strong> " . "(" . $phone[0],$phone[1],$phone[2] . ")" . $phone[3],$phone[4],$phone[5] . "-" . $phone[6],$phone[7],$phone[8],$phone[9] . "<br>";
             echo "<strong>Address:</strong><br> " . "<span>" . $address . " " . $apartment . "<br>" . $city . ", " . $state . " " . $zip . "</span><br>";
