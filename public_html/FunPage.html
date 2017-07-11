@@ -1,112 +1,441 @@
+
 <!DOCTYPE html>
-<!--
-    CIT 261 Ad Lib App Project
-    Created on : March 14, 2017, 7:42:45 AM
-    Author     : Eric Collett, Brandon Trimble and Max Gerasymenko
- -->
-<html lang="en-us">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- End Meta Tags -->
+<html>
+<head>
+	<title>My Story</title>
+</head>
 
-    <!-- Style Sheets -->
-    <link href="css/layout.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Layout Style Sheet -->
-    <link href="css/styling.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Styling Style Sheet -->
-    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="screen"/> <!-- Media Queries Style Sheet -->
-    <!-- End Style Sheets -->
-    
-    <!-- JavaScript -->
-    <script src="javascript/js.js"></script>
-    <!-- End JavaScript -->
+<style type="text/css">
+ html{
+ 	  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzU8xRs8dI8cuHuZMqs8g_XZMXXjgkQFZoUK9rHX-33wOuhJxZSQ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
 
-    <!-- Logo -->
-    <link rel="icon" type="image/png" href="images/mainLogo.png" />
+ #intro{
+ 	color: Indigo;
+ 	font-size: 30px;
+ 	font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
 
-    <title>Ad Lib Game</title>
-  </head>
+  p{
+ 	color: blue;
+ 	font-size: 30px;
+ 	font-weight: 700;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+ }
 
-  <body id="snow">
-<!--       <iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
-        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe> -->
-    <header>
-      <h1 class="center">Ad Lib Game</h1>
-      
-    </header>
 
-    <section>
-        <div id="welcome">
-            <h2>Welcome!</h2>
-            
-            <p>Enter your name to get started!</p>
-            
-            <form>
-                <p>Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
-                <button type="button" onclick="welcomeUser()">Submit</button>
-            </form>
-        </div>
 
-      <hr />
-        
-      <div style="width: 100%">
-        <div style="float: left; width: 30%;" id="div1"></div>
-        <div style="float: left; width: 40%;" id="div2">
-            <p id="par" style="visibility:hidden;">Noun : </p> 
-            <input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+ div{
+ 	color: blue;
+ 	text-align: center;
+ 	font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 
-            <p id="par1" style="visibility:hidden;">Verb : </p>
-            <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+ }
 
-            <p id="par2" style="visibility:hidden;">Place : </p> 
-            <input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+ .center{
+ 	text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;  
+ }
 
-            <p id="par3" style="visibility:hidden;">Adjective : </p>
-            <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+.myStory{
+	color: blue;
+	text-align: center;
+    font-size: 30px;
+    margin: auto;
+    width: 45%;
+}
 
-            <p id="par4" style="visibility:hidden;">Pronoun : </p> 
-            <input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
-        </div>
-    
-        <div style="float: left; width: 30%;" id="div3"></div>
+.input{
+      text-align: center;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button
+{
+	background-color: DarkBlue; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    cursor: pointer;
+    margin: auto;
+    padding: 14px 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2 {
+    background-color: MediumBlue; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-left: 40%;
+    width: 20%;
+    border: 3px solid DodgerBlue;
+    padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button2:hover {
+    background-color: DodgerBlue;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button3 {
+    background-color: LightSkyBlue; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin: auto;
+    width: 20%;
+    border: 3px solid DodgerBlue;
+    padding: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button3:hover {
+    background-color: DeepSkyBlue;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#albert, #alice, #fenrir{
+	color: SlateBlue;
+  margin: 0 auto;
+}
+
+#div1{
+    height: 400px;
+    text-align: center;
+
+}
+
+#div3{
+    height: 400px;
+    text-align: center;
+}
+
+ #welcome {
+     margin: 20px;
+     padding: 20px;
+     background-color: grey;
+     border-style: solid;
+     border-color: black;
+ }
+
+
+
+
+#snow{
+    background: none;
+    font-family: Androgyne;
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index:4;
+    -webkit-animation: snow 5s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 5s linear infinite;
+    animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+</style>
+
+<script type="text/javascript">
+
+
+
+ var res ="";
+
+
+function storeUsername(myUser) 
+{
+    if (window.localStorage)
+    {
           
-        <br style="clear: left;" />
+        localStorage.setItem('username', myUser);
+   
+    }
+    else
+    {
+        window.alert('Local Storage is not supported by your browser!');
+    }
+}
 
+function welcomeUser()
+{
+	 var txtUsername = document.getElementById("inputUser").value;
+
+    storeUsername(txtUsername);
+    
+    
+    var message = '<p class="center">Welcome to the ad lib game, ';
+    message += txtUsername + '! <br><br> Please choose a story!</p>'; // TODO: Test the local storage call.
+    
+    
+    document.getElementById('welcome').style.display = "none"; 
+    document.getElementById('alice').style.visibility = "visible"; 
+    document.getElementById('albert').style.visibility = "visible"; 
+    document.getElementById('fenrir').style.visibility = "visible";
+    document.getElementById('userData').innerHTML = message;
+    
+}
+
+
+
+
+function readFile(elementId){
+
+    var xmlhttp;
+
+    resetData();
+    setData(elementId);
+
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }else{
+        smlhttp = new ActiveXobject("Microsoft.XMLHTTP");
+    }
+    
+   
+    var text = document.getElementById(elementId).getAttribute('value');
+    var idName = document.getElementById(elementId).id;
+  
+    xmlhttp.onreadystatechange = function(){ 
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            var myStory = JSON.parse(xmlhttp.responseText);
+            replace(myStory, idName);
+           
+        }
+    }
+    
+    xmlhttp.open("GET", text,true);
+    xmlhttp.send();
+
+}
+
+
+function setData(elementId)
+{
+	document.getElementById("_noun").style.visibility = "visible";
+    document.getElementById("_verb").style.visibility = "visible";
+    document.getElementById("_adjective").style.visibility = "visible";
+    document.getElementById("_pro").style.visibility = "visible";
+    document.getElementById("_place").style.visibility = "visible";
+    
+    document.getElementById("par").style.visibility = "visible";
+    document.getElementById("par1").style.visibility = "visible";
+    document.getElementById("par2").style.visibility = "visible";
+    document.getElementById("par3").style.visibility = "visible";
+    document.getElementById("par4").style.visibility = "visible";
+    document.getElementById('result').style.background = "transparent";
+
+    if(elementId == "albert")
+    {
+    document.getElementById("div1").style.backgroundImage = "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTCna4Ko5lgLJzX_sJKHWWLpC2uBr_uvNMXsMpwlNYHoUQqDEUF')";
+
+    document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjZkaP5qXVQn6rRQHzCCEfjw9eAJXbr9EyF3cR7d2gi2xY-1NLQg')";
+    }
+    else if(elementId == "alice")
+    {
+        document.getElementById("div1").style.backgroundImage = "url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-wYQatEFLdstDhSyN5KcYhRoUhRjzz6gtCbWv4b2icDm8LiwfAw')";
+    document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSinLS5Rsl3ZimRHmXhi-ZyF97sbl1cSHKvIs2qjhRnNSiJaHa9bg')";
+    }
+    else if(elementId == "fenrir")
+    {
+        document.getElementById("div1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODWm8TI4M4_r6aBBoRE_q1wK-hw6HdVOzph9kF2Af8IBUSeJv')";
+    document.getElementById("div3").style.backgroundImage = "url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTWzz9AV9nbCORZ9UOG230FJ7Dc3kriGx1PGyTzihilDh5e4mBGfA')";
+    }
+    
+
+}
+function replace(myStory, idName)
+{ 
+   var i = 0;
+
+   while(i < myStory.stories.length){
+  
+    	if(myStory.stories[i].storyName === idName)
+   		{
+        	res = myStory.stories[i].content;
+        	break;
+    	}
+
+        i++;   
+    }
+}
+
+function ChangeColor(elementId)
+{
+
+	document.getElementById(elementId).style.background = "Navy";
+	document.getElementById(elementId).style.color = "White";
+    document.getElementById(elementId).style.width = "25%";
+
+}
+
+function changeBack(elementId)
+{
+
+	document.getElementById(elementId).style.background = "lightgrey";
+	document.getElementById(elementId).style.color = "Black";
+    document.getElementById(elementId).style.width = "25%";
+
+}
+
+function mDown(obj) {
+   	obj.style.backgroundColor = "Green";
+   
+}
+
+function mUp(obj) {
+	obj.style.backgroundColor="DarkBlue";
+
+}
+
+function display()
+{
+	var noun = document.getElementById("_noun").value.bold().sup().fontcolor("white");
+	var verb = document.getElementById("_verb").value.bold().sup().fontcolor("white");
+	var adjective = document.getElementById("_adjective").value.bold().sup().fontcolor("white");
+	var pronoun = document.getElementById("_pro").value.bold().sup().fontcolor("white");
+	var place = document.getElementById("_place").value.bold().sup().fontcolor("white"); 
+
+
+    var myObjStr = JSON.stringify(res);
+
+	var myNewStory = myObjStr.replace(/_noun/ig, noun)
+					.replace(/_verb/ig, verb)
+					.replace(/_adjective/ig, adjective)
+	 				.replace(/_pro/ig, pronoun)
+	 				.replace(/_place/ig, place)
+	 				.replace("[","")
+   	                .replace("]","")
+   	                .replace(/\"/g,"");
+
+	document.getElementById('result').innerHTML = myNewStory;
+    document.getElementById('result').style.background = "LightBlue";
+	document.getElementById('result').scrollIntoView();
+
+}
+
+function resetData()
+{
+
+	document.getElementById("story").style.visibility = "hidden";
+	document.getElementById("_verb").value = "";
+	document.getElementById("_adjective").value = "";
+	document.getElementById("_pro").value = "";
+	document.getElementById("_place").value = "";
+    document.getElementById("_noun").value = "";
+	document.getElementById('result').innerHTML = "";
+
+	document.getElementById("_noun").style.background = "white";
+	document.getElementById("_verb").style.background = "white";
+	document.getElementById("_adjective").style.background = "white";
+	document.getElementById("_pro").style.background = "white";
+	document.getElementById("_place").style.background = "white";
+    document.getElementById('result').style.background = "transparent";
+
+}	
+
+function displayButton(){
+
+    document.getElementById("story").style.visibility = "visible";
+    document.getElementById("story").innerHTML = "Display My Story";
+}
+
+function myFunction1(elementId){
+	 elementId.style.background = "LightSkyBlue";
+}
+</script>
+
+<body id="snow">
+<iframe width="0" height="0" src="https://www.youtube.com/embed/5AnkytyIdMw?autoplay=1" 
+        frameborder="0" style="visibility: hidden;" allowfullscreen></iframe>
+<h1 id="userData"></h1>
+       <div id="welcome">
+            <h2 id="intro">Welcome!</h2>
+            
+            <p id="intro">Enter your name to get started!</p>
+            
+            
+            <p id="intro">Username: <input id="inputUser" type="text" name="username" size="15" maxlength="30" /></p>
+            <button class="button button3" name="submit" value="Submit!" onclick="welcomeUser()">Submit!</button>
+            
        </div>
-        
-       <br>
-       <br>
 
-       <button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
-       <br>
-       <br>
-       <br>
-       
-       <div>
-           <div class="pictures" style="display:none;">
-              <img src="images/fenrir1.jpg" width="100%" height="100%">
-              <div class="fenrir1" id="result1">The children of Loki were _verb and then _verb. The oldest 
-of the children was carried while tied to the _adjective 
-trunk of a _noun. The second child was _verb with a 
-muzzle made of knotted willow and they _verb a _noun around 
-its neck as a _adjective, while the third child walked beside 
-them, _adjective and _adjective.</div>
-           </div>
-           <div class="pictures" style="display:none;">
-              <img src="images/fenrir_howl.jpg" width="100%" height="100%">
-              <div class="fenrir2" id="result2"></div>
-           </div>
-           <div class="pictures" style="display:none;">
-              <img src="images/fenrir_pup.jpg"  width="100%" height="100%">
-              <div class="fenrir3" id="result3"></div>
-           </div>
-           <button id="prevPic" onclick="nextSlide(-1)">&#10094;</button>
-           <button id="nextPic" onclick="nextSlide(1)">&#10095;</button>
-        
-       </div>
-       
-       <div class="myStory" id="result"></div> 
-    </section>
 
-  </body>
+<div onmouseover="ChangeColor(this.id)" onmouseleave="changeBack(this.id)" id="albert" value="stories.txt" 
+onclick="readFile(this.id)" style="visibility: hidden;"
+>Albert Einstein</div>
+<div id="alice" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
+onmouseleave="changeBack(this.id)" style="visibility: hidden;">
+Alice </div>
+<div id="fenrir" value="stories.txt" onclick="readFile(this.id)"  onmouseover="ChangeColor(this.id)" 
+onmouseleave="changeBack(this.id)" style="visibility: hidden;">
+Fenrir </div>
+<hr>
+<div style="width: 100%">
+ <div style="float: left; width: 30%;" id="div1"></div>
+ <div style="float: left; width: 40%;" id="div2">
+<p id="par" style="visibility:hidden;">Noun : </p> 
+<input type="text" name="input" id="_noun" onfocus="myFunction1(this)" style="visibility:hidden;" required > 
+
+<p id="par1" style="visibility:hidden;">Verb : </p>
+ <input type="text" name="input" id="_verb" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par2" style="visibility:hidden;">Place : </p> 
+<input type="text" name="input" id="_place" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par3" style="visibility:hidden;">Adjective : </p>
+ <input type="text" name="input" id="_adjective" onfocus="myFunction1(this)" style="visibility:hidden;" required>
+
+<p id="par4" style="visibility:hidden;">Pronoun : </p> 
+<input type="text" name="input" id="_pro" style="visibility:hidden;" onfocus="myFunction1(this)" oninput="displayButton()" required><br>
+</div>
+<div style="float: left; width: 30%;" id="div3"></div>
+ <br style="clear: left;" />
+
+</div>
+<br>
+<br>
+
+<button class="button button2" style="visibility:hidden;" id="story" onclick="display()"></button> 
+<br>
+<br>
+<br>
+<div class="myStory" id="result"><div>
+
+
+</body>
 </html>
