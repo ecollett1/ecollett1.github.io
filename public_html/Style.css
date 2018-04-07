@@ -23,6 +23,12 @@ h1 {
 main {
    background-color: white;
    padding: 20px;
+   display: grid;
+   grid-template-columns: 50% 50%;
+}
+.page-container {
+   display: grid;
+   grid-template-columns: 50% 50%;
 }
 #large {
    font-size: 25px;
