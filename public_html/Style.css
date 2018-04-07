@@ -22,7 +22,7 @@ h1 {
 
 main {
    background-color: white;
-   
+   padding: 20px;
 }
 #large {
    font-size: 25px;
