@@ -24,6 +24,9 @@ main {
    background-color: white;
    padding: 20px;
 }
+div {
+   padding: 10px;
+}
 .page-container {
    display: grid;
    grid-template-columns: 50% 50%;
