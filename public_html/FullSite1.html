@@ -2,7 +2,8 @@
 <html>
   <head>
     <style>
-      .normal {                    <!--These are all the original styles for the page, not included in the .css stylesheet-->
+			<!--These are all the original styles for the page, not included in the .css stylesheet-->
+      .normal {
          font-size: 12px;
          color: black;
          background: white;
@@ -26,16 +27,16 @@
       .center {
          text-align: center;
       }
-                                   <!--Down to this point.-->
-    </style>
-    <title>Coilett Industries</title>
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    	<!--Down to this point.-->
+		</style>
+		<title>Coilett Industries</title>
+		<link rel="stylesheet" type="text/css" href="Style.css">
     
     <script>
       function draw()
       {
         var canvas = document.getElementById("canvas");
-           var ctx = canvas.getContext('2d');
+				var ctx = canvas.getContext('2d');
         ctx.beginPath();
         ctx.arc(75,75,40,0,Math.PI*2,true); // Outer circle
         ctx.moveTo(107,75);
@@ -191,7 +192,7 @@
         ctx.moveTo(255, 205);
         ctx.lineTo(255.5, 205);
         ctx.stroke();
-      }
+			}
     </script>
     
     <script>
@@ -212,228 +213,234 @@
   </head>
   <body id="mainContainer" class="fade-out">
     <main>
-      
-			<h1 id="large">Coilett Industries</h1>
-			<h2>Introduction</h2>
-			<div class="introduction-section">
-				<p id="p1">Coilett Industries is a company made to help people who have disabilities or problems mentally.  We strive
-				to find out why the brain is working the way it is, and want to learn how we can better fix it.</p>
+      <header>
+				<h1 id="large">Coilett Industries</h1>
+			</header>
+			
+			<div class="page-container">
+				<h2>Introduction</h2>
+				<div class="introduction-section">
+					<p id="p1">Coilett Industries is a company made to help people who have disabilities or problems mentally.  We strive
+					to find out why the brain is working the way it is, and want to learn how we can better fix it.</p>
 
-				<script>
-					document.getElementById("p1").style.color = "red";
-					document.getElementById("p1").style.backgroundColor = "randomColor";
-					document.getElementById("p1").style.border = "medium solid black";
-				</script>
+					<script>
+						document.getElementById("p1").style.color = "red";
+						document.getElementById("p1").style.backgroundColor = "randomColor";
+						document.getElementById("p1").style.border = "medium solid black";
+					</script>
 
-				<button type="button" onclick="document.getElementById('p1').style.color = 'blue'">
-					Change the CSS!</button>
-				<br>
-				<br>
-			</div>
-
-			<div class="psychology-paper">
-				<span class="normal">Since there are so many different opinions on the different subjects of the brain</span>
-				<span class="normal">we feel it's important to post an article written by one of our own:</span>
-				<br>
-				<br>
-				<a class="center" id="large" href="How Psychotherapy Changes the Brain.docx">How Psychotherapy Changes the Brain</a>
-				<br><br><br>
-				<button type="button" onclick="document.querySelector('#mainContainer').style.backgroundColor = 'orange'">Change the page</button>
-				<br>
-			</div>
-
-			<h3>Canvas API</h3>
-			<h4>Now Serving: </h4>
-			<div class="canvas-drawing">
-				<div class="relative">
-					<canvas id="canvas" width="100%" height="400"></canvas>
-				</div>
-
-				<progress id="progress" value="0" max="100">
-				</progress>
-				<script>
-					var progress = 0;
-						moveForward();
-
-						function moveForward() {
-							var x = document.getElementById("progress");
-								progress++;
-							 if (progress > 100) { progress = 0;}
-							 x.value = progress;
-
-							 setTimeout(moveForward, 100);
-					 }
-				</script>
-				<div style="margin-left: auto;margin-right: auto;">
+					<button type="button" onclick="document.getElementById('p1').style.color = 'blue'">
+						Change the CSS!</button>
 					<br>
-					<iframe width="100%" height="480" src="https://www.youtube.com/embed/StTqXEQ2l-Y" frameborder="0" allowfullscreen></iframe>
 					<br>
 				</div>
-				<p>This whole section other than the headers was done using Canvas API, here's where I learned how:
-				<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
-				</p>
-				<br>
-				<br><br>
-			</div>
 
-			<h5 id="large">AJAX examples</h5>
-			<div class="ajax-examples">
-				<pre id="toReplace"><p>Choose a country to display the 10 largest cities with their populations:</p></pre>
+				<div class="psychology-paper">
+					<span class="normal">Since there are so many different opinions on the different subjects of the brain</span>
+					<span class="normal">we feel it's important to post an article written by one of our own:</span>
+					<br>
+					<br>
+					<a class="center" id="large" href="How Psychotherapy Changes the Brain.docx">How Psychotherapy Changes the Brain</a>
+					<br><br><br>
+					<button type="button" onclick="document.querySelector('#mainContainer').style.backgroundColor = 'orange'">Change the page</button>
+					<br>
+				</div>
 
-				<select class="dropdown" onchange="loadDoc(this)">
-					<option value="default.txt">Default</option>
-					<option value="canada.txt">Canada</option>
-					<option value="usa.txt">USA</option>
-					<option value="russia.txt">Russia</option>
-					<option value="mexico.txt">Mexico</option>
-				</select>
+				<h3>Canvas API</h3>
+				<h4>Now Serving: </h4>
+				<div class="canvas-drawing">
+					<div class="relative">
+						<canvas id="canvas" width="100%" height="400"></canvas>
+					</div>
 
-				<script>
-					function loadDoc(tag) {
-					console.log(tag.value);
-					var text = new XMLHttpRequest();
-					text.onreadystatechange = function() {
-						if (text.readyState == 4 && text.status == 200) 
-						{
-							document.getElementById("toReplace").innerHTML = text.responseText;
-						}
-					};
-					text.open("GET", tag.value, true);
-					text.send();
-					}
-				</script>
-			</div>
+					<progress id="progress" value="0" max="100">
+					</progress>
+					<script>
+						var progress = 0;
+							moveForward();
 
-			<h6 id="large">Parsing JSON files</h6>
-			<div class="json-parsing">
-				<div id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
-				<input type="text" id="location" value="json.txt"/>
-				<input type="button" onclick="loadJson()" value="Submit URL"/>
-				<br><br>
-				<script>
-					function loadJson() {
-						var toParse = new XMLHttpRequest();
-						var url = document.getElementById("location").value;
-						toParse.onreadystatechange = function() {
-							if (toParse.readyState == 4 && toParse.status == 200) 
+							function moveForward() {
+								var x = document.getElementById("progress");
+									progress++;
+								 if (progress > 100) { progress = 0;}
+								 x.value = progress;
+
+								 setTimeout(moveForward, 100);
+						 }
+					</script>
+					<div style="margin-left: auto;margin-right: auto;">
+						<br>
+						<iframe width="100%" height="480" src="https://www.youtube.com/embed/StTqXEQ2l-Y" frameborder="0" allowfullscreen></iframe>
+						<br>
+					</div>
+					<p>This whole section other than the headers was done using Canvas API, here's where I learned how:
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
+					</p>
+					<br>
+					<br><br>
+				</div>
+
+				<h5 id="large">AJAX examples</h5>
+				<div class="ajax-examples">
+					<pre id="toReplace"><p>Choose a country to display the 10 largest cities with their populations:</p></pre>
+
+					<select class="dropdown" onchange="loadDoc(this)">
+						<option value="default.txt">Default</option>
+						<option value="canada.txt">Canada</option>
+						<option value="usa.txt">USA</option>
+						<option value="russia.txt">Russia</option>
+						<option value="mexico.txt">Mexico</option>
+					</select>
+
+					<script>
+						function loadDoc(tag) {
+						console.log(tag.value);
+						var text = new XMLHttpRequest();
+						text.onreadystatechange = function() {
+							if (text.readyState == 4 && text.status == 200) 
 							{
-								var array = JSON.parse(toParse.responseText);
-								myFunction(array);
+								document.getElementById("toReplace").innerHTML = text.responseText;
 							}
 						};
-						toParse.open("GET", url, true);
-						toParse.send();
-					}
-
-					function myFunction(array)
-					{
-						var out = "Students: <br>";
-						var i;
-						for (i = 0; i < array.length; i++)
-						{
-							out += "<p><strong>" + array[i].first + " " + array[i].last + "</strong> - " + array[i].address.city +  ", " + 
-							array[i].address.state + " " +  array[i].address.zip + "<br>Major in: " + array[i].major + 
-							"<br>GPA: " + array[i].gpa + "</p>";
+						text.open("GET", tag.value, true);
+						text.send();
 						}
-						document.getElementById("toReplace2").innerHTML = out;
-					}
-				</script>
-				<br><br>
-			</div>
-			<!-- All of the DOM manipulations -->
-			<h7 id="large">DOM</h7>
-			<div class="dom-manipulation">
-				<p><strong>DOM Manipulation</strong></p>
-				<form action="" id="form1">
-					<table>
-						<tr>
-							<td><p id="createNode">This is the first parent node.</p></td>
-							<td><p id="secondNode">Second text to work with others.</p></td>
-						</tr>
-					</table>
-					<form action="" id="form2">
+					</script>
+				</div>
+
+				<h6 id="large">Parsing JSON files</h6>
+				<div class="json-parsing">
+					<div id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
+					<input type="text" id="location" value="json.txt"/>
+					<input type="button" onclick="loadJson()" value="Submit URL"/>
+					<br><br>
+					<script>
+						function loadJson() {
+							var toParse = new XMLHttpRequest();
+							var url = document.getElementById("location").value;
+							toParse.onreadystatechange = function() {
+								if (toParse.readyState == 4 && toParse.status == 200) 
+								{
+									var array = JSON.parse(toParse.responseText);
+									myFunction(array);
+								}
+							};
+							toParse.open("GET", url, true);
+							toParse.send();
+						}
+
+						function myFunction(array)
+						{
+							var out = "Students: <br>";
+							var i;
+							for (i = 0; i < array.length; i++)
+							{
+								out += "<p><strong>" + array[i].first + " " + array[i].last + "</strong> - " + array[i].address.city +  ", " + 
+								array[i].address.state + " " +  array[i].address.zip + "<br>Major in: " + array[i].major + 
+								"<br>GPA: " + array[i].gpa + "</p>";
+							}
+							document.getElementById("toReplace2").innerHTML = out;
+						}
+					</script>
+					<br><br>
+				</div>
+				<!-- All of the DOM manipulations -->
+				<h7 id="large">DOM</h7>
+				<div class="dom-manipulation">
+					<p><strong>DOM Manipulation</strong></p>
+					<form action="" id="form1">
 						<table>
 							<tr>
-								<td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
-								<td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
-								<td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
-								<td><button onmousedown="domReplaceChild()" style='color:brown'>Replace Child</button></td>
+								<td><p id="createNode">This is the first parent node.</p></td>
+								<td><p id="secondNode">Second text to work with others.</p></td>
 							</tr>
 						</table>
+						<form action="" id="form2">
+							<table>
+								<tr>
+									<td><button onmousedown="domCreateChild()" style='color:blue'>Create Child</button></td>
+									<td><button onmousedown="domInsertBefore()" style='color:green'>Insert Before</button></td>
+									<td><button onmousedown="domRemoveChild()" style='color:red'>Remove Child</button></td>
+									<td><button onmousedown="domReplaceChild()" style='color:brown'>Replace Child</button></td>
+								</tr>
+							</table>
+						</form>
 					</form>
-				</form>
-				<script>   //DOM Manipulation
-					function domCreateChild() {
-						var newChild = document.createElement("p");
-						var newNode = document.createTextNode("This is the child node of the one above");
-						newChild.appendChild(newNode);
+					<script>   //DOM Manipulation
+						function domCreateChild() {
+							var newChild = document.createElement("p");
+							var newNode = document.createTextNode("This is the child node of the one above");
+							newChild.appendChild(newNode);
 
-						var parentText = document.getElementById("createNode");
-						parentText.appendChild(newChild);
-					}
-
-					function domInsertBefore() {
-						var newChild = document.createElement("p");
-						var newNode = document.createTextNode("This is the child node of the one below");
-						newChild.appendChild(newNode);
-
-						var parentText = document.getElementById("createNode");
-						var childText = document.getElementById("secondNode");
-						parentText.appendChild(childText);
-						parentText.insertBefore(newChild, childText);
-					}
-
-					function domRemoveChild() {
-						var parentText = document.getElementById("createNode");
-						parentText.appendChild(document.getElementById("secondNode"));
-						parentText.removeChild(document.getElementById("secondNode"));	
-					}
-
-					function domReplaceChild() {
-						var newChild = document.createElement("p");
-						var newNode = document.createTextNode("Replaced the text!");
-						newChild.appendChild(newNode);
-
-						var parentText = document.getElementById("createNode");
-						var childText = document.getElementById("secondNode");
-						parentText.appendChild(childText);
-						parentText.replaceChild(newChild, childText);
-					}
-				</script>
-				<br><br>
-			</div>
-			<h10>Local Storage Testing!</h10>
-			<div class="local-storage">
-				<input id="inputbox" type="text" value="type here" onkeypress="localS()"/>
-				<p id="result">Watch this text change!</p>
-
-				<script>
-					function localS() {
-						if (typeof(Storage) !== "undefined") {
-							localStorage.setItem("text", document.getElementById("inputbox").value);
-
-							document.getElementById("result").innerHTML = localStorage.getItem("text");
+							var parentText = document.getElementById("createNode");
+							parentText.appendChild(newChild);
 						}
-						else {
-							alert("Your browser doesn't support local storage...");
-						}
-					}
-				</script>
-				<br>
-				<button type="button" onclick="localS()">Same Thing</button>
-				<br><br><br>
-			</div>
-			<h1>End Of Page</h1>
-			<div class="end-page"> 
-				<p class="important">If you really want to go to the next page just make sure you click on the link for page 2.
-				The "Home Directory" link will bring you back to the original page, and the "Week 03 Team assignment" will bring
-				you do the team activity for this week.</p>
 
-				<a class="page2" href="FunPage.html">Continue to page 2 >> </a>
-				<hr>
-				<a href="../index.html">Home Directory</a>
-				<br>
+						function domInsertBefore() {
+							var newChild = document.createElement("p");
+							var newNode = document.createTextNode("This is the child node of the one below");
+							newChild.appendChild(newNode);
+
+							var parentText = document.getElementById("createNode");
+							var childText = document.getElementById("secondNode");
+							parentText.appendChild(childText);
+							parentText.insertBefore(newChild, childText);
+						}
+
+						function domRemoveChild() {
+							var parentText = document.getElementById("createNode");
+							parentText.appendChild(document.getElementById("secondNode"));
+							parentText.removeChild(document.getElementById("secondNode"));	
+						}
+
+						function domReplaceChild() {
+							var newChild = document.createElement("p");
+							var newNode = document.createTextNode("Replaced the text!");
+							newChild.appendChild(newNode);
+
+							var parentText = document.getElementById("createNode");
+							var childText = document.getElementById("secondNode");
+							parentText.appendChild(childText);
+							parentText.replaceChild(newChild, childText);
+						}
+					</script>
+					<br><br>
+				</div>
+				<h10>Local Storage Testing!</h10>
+				<div class="local-storage">
+					<input id="inputbox" type="text" value="type here" onkeypress="localS()"/>
+					<p id="result">Watch this text change!</p>
+
+					<script>
+						function localS() {
+							if (typeof(Storage) !== "undefined") {
+								localStorage.setItem("text", document.getElementById("inputbox").value);
+
+								document.getElementById("result").innerHTML = localStorage.getItem("text");
+							}
+							else {
+								alert("Your browser doesn't support local storage...");
+							}
+						}
+					</script>
+					<br>
+					<button type="button" onclick="localS()">Same Thing</button>
+					<br><br><br>
+				</div>
 			</div>
+			<footer>
+				<h1>End Of Page</h1>
+				<div class="end-page"> 
+					<p class="important">If you really want to go to the next page just make sure you click on the link for page 2.
+					The "Home Directory" link will bring you back to the original page, and the "Week 03 Team assignment" will bring
+					you do the team activity for this week.</p>
+
+					<a class="page2" href="FunPage.html">Continue to page 2 >> </a>
+					<hr>
+					<a href="../index.html">Home Directory</a>
+					<br>
+				</div>
+			</footer>
     </main>
   </body>
 </html>
