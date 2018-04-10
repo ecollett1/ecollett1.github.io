@@ -28,14 +28,17 @@ div {
    padding: 10px;
 }
 .page-container {
-   display: grid;
-   grid-template-columns: 50% 50%;
+   display: flex;
+   flex-wrap: wrap;
 }
 #large {
    font-size: 25px;
    font-family: "Times New Roman";
 }
-
+#toReplace {
+   white-space: normal;
+   margin: 0;
+}
 .page2 {
    background-color: #69DDFF;
    font-family: "Times New Roman";
