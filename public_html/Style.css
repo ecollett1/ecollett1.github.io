@@ -37,6 +37,10 @@ div {
    display: flex;
    flex-wrap: wrap;
 }
+.page-container div {
+    border: 1px solid;
+    margin: 10px;
+}
 #large {
    font-size: 25px;
    font-family: "Times New Roman";
