@@ -9,7 +9,12 @@ body {
    text-align: left;
    direction: ltr;
 }
-
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
 title {
    font-size: 20px;
    text-align: center; 
