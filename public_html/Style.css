@@ -19,14 +19,6 @@ h1 {
    color: black;
    text-align: center;
 }
-h1, h2, h3, h4, h5, h6 {
-   voice-family: paul;
-   voice-stress: moderate;
-   voice-family: male;
-   voice-balance: right;
-   voice-rate: fast;
-   voice-volume: medium 6dB;
-}
 main {
    background-color: white;
    padding: 20px;
