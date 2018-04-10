@@ -63,15 +63,12 @@ div {
 
 a:hover {
    text-shadow: 2px 2px cyan;
-   font-size: 125%;
 }
 
 p {
-   padding-left: 50px;
-   padding-right: 50px;
+   font-size: 1.3em;
 }
 
 p.important {
    color: red;
-   font-size: 16px;
 }
