@@ -19,11 +19,6 @@
          display: block;
       }
       
-      div.relative {
-        position: relative;
-        left: 30px;
-      }
-      
       .center {
          text-align: center;
       }
@@ -248,10 +243,12 @@
 				<div class="canvas-drawing">
 					<h3>Canvas API</h3>
 					<h4>Now Serving: </h4>
-					<div class="relative">
-						<canvas id="canvas" width="400" height="400"></canvas>
-					</div>
-
+					<canvas id="canvas" width="400" height="400"></canvas>
+					<br>
+					<p>This whole section other than the headers was done using Canvas API, here's where I learned how:
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
+					</p>
+					<br>
 					<progress id="progress" value="0" max="100">
 					</progress>
 					<script>
@@ -268,18 +265,11 @@
 						 }
 					</script>
 				</div>
-				<div class="everything-is-awesome">
-					<div style="margin-left: auto;margin-right: auto;">
+					<div class="everything-is-awesome" style="margin-left: auto;margin-right: auto;">
 						<br>
 						<iframe width="100%" height="480" src="https://www.youtube.com/embed/StTqXEQ2l-Y" frameborder="0" allowfullscreen></iframe>
 						<br>
 					</div>
-					<p>This whole section other than the headers was done using Canvas API, here's where I learned how:
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a>
-					</p>
-					<br>
-					<br><br>
-				</div>
 
 				<div class="ajax-examples">
 					<h5 id="large">AJAX examples</h5>
@@ -311,7 +301,7 @@
 
 				<div class="json-parsing">
 					<h6 id="large">Parsing JSON files</h6>
-					<div id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
+					<span id="toReplace2"><h5>Type in the file location of a JSON file:</h5></div>
 					<input type="text" id="location" value="json.txt"/>
 					<input type="button" onclick="loadJson()" value="Submit URL"/>
 					<br><br>
