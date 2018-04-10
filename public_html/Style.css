@@ -10,10 +10,11 @@ body {
    direction: ltr;
 }
 button, select {
-    padding: 10px;
-    font-size: 1em;
-    background-color: aliceblue;
-    border-radius: 5px;
+   padding: 10px;
+   font-size: 1em;
+   background-color: aliceblue;
+   border-radius: 5px;
+   cursor: pointer;
 }
 title {
    font-size: 20px;
