@@ -37,6 +37,7 @@ div {
 .page-container {
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-evenly;
 }
 .page-container div {
     border: 1px solid;
