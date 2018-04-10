@@ -40,11 +40,13 @@ div {
 .page-container {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-evenly;
+   justify-content: space-between;
 }
 .page-container div {
-    border: 1px solid;
-    margin: 10px;
+   border: 1px solid;
+   margin: 10px;
+   min-width: 42%;
+   max-width: 48%;
 }
 #large {
    font-size: 25px;
