@@ -16,6 +16,9 @@ button, select {
    border-radius: 5px;
    cursor: pointer;
 }
+button:hover, select:hover {
+    background-color: azure;
+}
 title {
    font-size: 20px;
    text-align: center; 
