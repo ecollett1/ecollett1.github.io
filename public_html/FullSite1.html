@@ -217,7 +217,15 @@
 
 					<script>
 						document.getElementById("p1").style.color = "red";
-						document.getElementById("p1").style.backgroundColor = "randomColor";
+						function getRandomColor() {
+							var letters = '0123456789ABCDEF';
+							var color = '#';
+							for (var i = 0; i < 6; i++) {
+								color += letters[Math.floor(Math.random() * 16)];
+							}
+							return color;
+						}
+						document.getElementById("p1").style.backgroundColor = getRandomColor();
 						document.getElementById("p1").style.border = "medium solid black";
 					</script>
 
