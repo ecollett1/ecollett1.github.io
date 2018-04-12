@@ -243,21 +243,27 @@
 				</div>
 				<script>
 					var changingOff = 0;
+					var t;
 					function getRandomColor() {
-						changingOff = 0;
-						if(!changingOff) {
-							var letters = '0123456789ABCDEF';
-							var color = '#';
-							for (var i = 0; i < 6; i++) {
-								color += letters[Math.floor(Math.random() * 16)];
-							}
-							document.querySelector('#mainContainer').style.backgroundColor = color;
-							setTimeout(getRandomColor, 1000);
+						var letters = '0123456789ABCDEF';
+						var color = '#';
+						for (var i = 0; i < 6; i++) {
+							color += letters[Math.floor(Math.random() * 16)];
+						}
+						document.querySelector('#mainContainer').style.backgroundColor = color;
+						t = setTimeout(function() { getRandomColor() }, 1000);
+					}
+
+					function startChange() {
+						if (!changingOff) {
+							changingOff = 1;
+							timedCount();
 						}
 					}
-					function stopCount() {
-						clearTimeout(setTimeout(getRandomColor, 1000));
-						changingOff = 1;
+
+					function stopChange() {
+						clearTimeout(t);
+						changingOff = 0;
 					}
 				</script>
 				<div class="canvas-drawing">
