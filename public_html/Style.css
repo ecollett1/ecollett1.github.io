@@ -46,7 +46,7 @@ div {
    border: 1px solid;
    margin: 10px;
    min-width: 42%;
-   max-width: 48%;
+   max-width: min-content;
 }
 #large {
    font-size: 25px;
