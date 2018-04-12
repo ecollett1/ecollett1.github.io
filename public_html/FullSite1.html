@@ -238,9 +238,14 @@
 					<br><br><br>
 					<button type="button" onclick="getRandomColor()">Change the page</button>
 					<br>
+					<button type="button" onclick="stopCount()">Stop Change</button>
+					<br>
 				</div>
 				<script>
+					var changingOff = 0;
 					function getRandomColor() {
+						changingOff = 0;
+						if(!changingOn) {
 							var letters = '0123456789ABCDEF';
 							var color = '#';
 							for (var i = 0; i < 6; i++) {
@@ -249,6 +254,11 @@
 							document.querySelector('#mainContainer').style.backgroundColor = color;
 							setTimeout(getRandomColor, 1000);
 						}
+					}
+					function stopCount() {
+						clearTimeout(t);
+						changingOff = 1;
+					}
 				</script>
 				<div class="canvas-drawing">
 					<h3>Canvas API</h3>
