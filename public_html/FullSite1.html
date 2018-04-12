@@ -217,15 +217,7 @@
 
 					<script>
 						document.getElementById("p1").style.color = "red";
-						function getRandomColor() {
-							var letters = '0123456789ABCDEF';
-							var color = '#';
-							for (var i = 0; i < 6; i++) {
-								color += letters[Math.floor(Math.random() * 16)];
-							}
-							return color;
-						}
-						document.getElementById("p1").style.backgroundColor = getRandomColor();
+						document.getElementById("p1").style.backgroundColor = "randomColor;
 						document.getElementById("p1").style.border = "medium solid black";
 					</script>
 
@@ -244,10 +236,19 @@
 					<br>
 					<a class="center" id="large" href="How Psychotherapy Changes the Brain.docx">How Psychotherapy Changes the Brain</a>
 					<br><br><br>
-					<button type="button" onclick="document.querySelector('#mainContainer').style.backgroundColor = 'orange'">Change the page</button>
+					<button type="button" onclick="getRandomColor()">Change the page</button>
 					<br>
 				</div>
-
+				<script>
+					function getRandomColor() {
+							var letters = '0123456789ABCDEF';
+							var color = '#';
+							for (var i = 0; i < 6; i++) {
+								color += letters[Math.floor(Math.random() * 16)];
+							}
+							document.querySelector('#mainContainer').style.backgroundColor = color;
+						}
+				</script>
 				<div class="canvas-drawing">
 					<h3>Canvas API</h3>
 					<h4>Now Serving: </h4>
