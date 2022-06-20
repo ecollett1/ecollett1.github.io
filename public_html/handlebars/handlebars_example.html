@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <div id="itemsSection"></div>
+
+  <script id="entry-template" type="text/x-handlebars-template">  
+    <ul class="items-list"></ul>
+      {{#items}}
+      <li>
+        <a href="{{url}}" target="_blank">{{title}}</a><br/><span>{{summary}}</span>
+      </li>
+      {{/items}}
+    </ul>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script>
+    const items = [];
+    items.push({"url":"https://www.google.com","title":"Google","summary":"This is the summary for Google"});
+    items.push({"url":"https://www.akumina.com","title":"Akumina","summary":"This is the summary for Akumina"});
+    items.push({"url":"https://www.twitch.tv","title":"Twitch.tv","summary":"This is the summary for Twitch.tv"});
+    // compile the template
+    const template = Handlebars.compile(document.querySelector('#entry-template').innerHTML);
+    document.querySelector('#itemsSection').innerHTML = template({items});
+  </script>
+</body>
+</html>
